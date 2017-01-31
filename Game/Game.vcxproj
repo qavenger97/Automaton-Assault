@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A85A5DC2-6108-498C-A765-72D9DFB756BF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Game</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Svochak\Perforce\BSvochak_P4_Workspace\Studios\1611 - Urnverse\Project Isolation\AutomatonAssault\Dependencies\Gateware\Include\Interface;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Engine;../Dependencies/Wwise/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>GamePch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Dependencies\Wwise\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\Dependencies\Wwise\bin\x86\AkSoundEngineDLL.dll .\ /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Engine;../Dependencies/Wwise/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>GamePch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>
+      </StackReserveSize>
+      <AdditionalLibraryDirectories>..\Dependencies\Wwise\lib\x64;C:\Users\Svochak\Perforce\BSvochak_P4_Workspace\Studios\1611 - Urnverse\Project Isolation\AutomatonAssault\Dependencies\Gateware\Lib\Win32\amd64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\Dependencies\Wwise\bin\x64\AkSoundEngineDLL.dll .\ /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Engine;../Dependencies/Wwise/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>GamePch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Dependencies\Wwise\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\Dependencies\Wwise\bin\x86\AkSoundEngineDLL.dll .\ /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Engine;../Dependencies/Wwise/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>GamePch.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>16777216 </StackReserveSize>
+      <AdditionalLibraryDirectories>..\Dependencies\Wwise\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\Dependencies\Wwise\bin\x64\AkSoundEngineDLL.dll .\ /y</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActorShadow.cpp" />
+    <ClCompile Include="AI_AlignBossHead.cpp" />
+    <ClCompile Include="AI_CarrierReleaseEnemies.cpp" />
+    <ClCompile Include="AI_CarrierSpawnEnemies.cpp" />
+    <ClCompile Include="AI_ChargeBeam.cpp" />
+    <ClCompile Include="AI_ChargeUp.cpp" />
+    <ClCompile Include="AI_EnemyGrouping.cpp" />
+    <ClCompile Include="AI_ExtendClaw.cpp" />
+    <ClCompile Include="AI_FireLaser.cpp" />
+    <ClCompile Include="AI_Grapple.cpp" />
+    <ClCompile Include="AI_IsPlayerAlone.cpp" />
+    <ClCompile Include="AI_KeypressToContinue.cpp" />
+    <ClCompile Include="AI_LaserBurnStationary.cpp" />
+    <ClCompile Include="AI_Lunge.cpp" />
+    <ClCompile Include="AI_MoveToLoc.cpp" />
+    <ClCompile Include="AI_PlayAudioEvent.cpp" />
+    <ClCompile Include="AI_PositionCarrier.cpp" />
+    <ClCompile Include="AI_RadialPatrol.cpp" />
+    <ClCompile Include="AI_Rise.cpp" />
+    <ClCompile Include="AI_SpiderBotBehavior.cpp" />
+    <ClCompile Include="AI_SpinClaw.cpp" />
+    <ClCompile Include="AI_Surface.cpp" />
+    <ClCompile Include="AI_ToggleLaserHP.cpp" />
+    <ClCompile Include="AI_TogglePlayerMovement.cpp" />
+    <ClCompile Include="AI_ToggleShield.cpp" />
+    <ClCompile Include="AI_Attack.cpp" />
+    <ClCompile Include="AI_ChargerRocketSpawn.cpp" />
+    <ClCompile Include="AI_Chase.cpp" />
+    <ClCompile Include="AI_Die.cpp" />
+    <ClCompile Include="AI_HasHP.cpp" />
+    <ClCompile Include="AI_IsInAtkRange.cpp" />
+    <ClCompile Include="AI_ToggleWurmDoor.cpp" />
+    <ClCompile Include="AI_Track.cpp" />
+    <ClCompile Include="AI_Tunnel.cpp" />
+    <ClCompile Include="AI_TurnTo.cpp" />
+    <ClCompile Include="AI_Teleport.cpp" />
+    <ClCompile Include="AI_LaserChase.cpp" />
+    <ClCompile Include="AudioEventReceiver.cpp" />
+    <ClCompile Include="BhvAIAttack.cpp" />
+    <ClCompile Include="AutomatonAssault.cpp" />
+    <ClCompile Include="BehaviorSet.cpp" />
+    <ClCompile Include="BossAgent.cpp" />
+    <ClCompile Include="BossComp.cpp" />
+    <ClCompile Include="CameraShakeEffect.cpp" />
+    <ClCompile Include="ChargerComp.cpp" />
+    <ClCompile Include="Chase.cpp" />
+    <ClCompile Include="ComponentSet.cpp" />
+    <ClCompile Include="AssembledEntitySet.cpp" />
+    <ClCompile Include="Crate.cpp" />
+    <ClCompile Include="EntityGroup.cpp" />
+    <ClCompile Include="EntitySpawner.cpp" />
+    <ClCompile Include="GamePch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GameUtils.cpp" />
+    <ClCompile Include="Gate.cpp" />
+    <ClCompile Include="GrapplerComp.cpp" />
+    <ClCompile Include="GunLogic.cpp" />
+    <ClCompile Include="HealthModule.cpp" />
+    <ClCompile Include="IKComponent.cpp" />
+    <ClCompile Include="IKObject.cpp" />
+    <ClCompile Include="ImplodeExplode.cpp" />
+    <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="LevelExit.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="PlayerComp.cpp" />
+    <ClCompile Include="PowerUpShield.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="RadialGravity.cpp" />
+    <ClCompile Include="RotatingRoom.cpp" />
+    <ClCompile Include="RotationalNoise.cpp" />
+    <ClCompile Include="ShiftingPlatform.cpp" />
+    <ClCompile Include="SpinMotor.cpp" />
+    <ClCompile Include="Temp_PlayerDie.cpp" />
+    <ClCompile Include="Terminal.cpp" />
+    <ClCompile Include="ThirdPersonCameraComponent.cpp" />
+    <ClCompile Include="Turret.cpp" />
+    <ClCompile Include="TurretSkinnedMesh.cpp" />
+    <ClCompile Include="UnitShield.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{f7aa1fe6-d7dd-487d-b2f7-c16756413ab2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorShadow.h" />
+    <ClInclude Include="AI_AlignBossHead.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_CarrierReleaseEnemies.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_CarrierSpawnEnemies.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_ChargeBeam.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_ChargeUp.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_EnemyGrouping.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_ExtendClaw.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_FireLaser.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Grapple.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_IsPlayerAlone.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_KeypressToContinue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_LaserBurnStationary.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Lunge.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_MoveToLoc.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_PlayAudioEvent.h" />
+    <ClInclude Include="AI_PositionCarrier.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_RadialPatrol.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Rise.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_SpiderBotBehavior.h" />
+    <ClInclude Include="AI_SpinClaw.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Surface.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_ToggleLaserHP.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_TogglePlayerMovement.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_ToggleShield.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Attack.h" />
+    <ClInclude Include="AI_ChargerRocketSpawn.h" />
+    <ClInclude Include="AI_Chase.h" />
+    <ClInclude Include="AI_Die.h" />
+    <ClInclude Include="AI_HasHP.h" />
+    <ClInclude Include="AI_IsInAtkRange.h" />
+    <ClInclude Include="AI_ToggleWurmDoor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Track.h" />
+    <ClInclude Include="AI_Tunnel.h" />
+    <ClInclude Include="AI_TurnTo.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_Teleport.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AI_LaserChase.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AudioEventReceiver.h" />
+    <ClInclude Include="BhvAIAttack.h" />
+    <ClInclude Include="AutomatonAssault.h" />
+    <ClInclude Include="BehaviorSet.h" />
+    <ClInclude Include="BossAgent.h" />
+    <ClInclude Include="BossComp.h" />
+    <ClInclude Include="CameraShakeEffect.h" />
+    <ClInclude Include="ChargerComp.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Chase.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="ComponentSet.h" />
+    <ClInclude Include="AssembledEntitySet.h" />
+    <ClInclude Include="Crate.h" />
+    <ClInclude Include="EntityGroup.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="EntitySpawner.h" />
+    <ClInclude Include="GameMessage.h" />
+    <ClInclude Include="GamePch.h" />
+    <ClInclude Include="GameUtils.h" />
+    <ClInclude Include="Gate.h" />
+    <ClInclude Include="GrapplerComp.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GunLogic.h" />
+    <ClInclude Include="HealthModule.h" />
+    <ClInclude Include="HLSL\ConstBufferPS.h" />
+    <ClInclude Include="HLSL\ConstBufferVS.h" />
+    <None Include="HLSL\BRDF.hlsli" />
+    <None Include="HLSL\ShaderCommon.hlsli" />
+    <ClInclude Include="HLSL\SharedDefines.h" />
+    <ClInclude Include="IKComponent.h" />
+    <ClInclude Include="IKObject.h" />
+    <ClInclude Include="ImplodeExplode.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="LevelExit.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Pickup.h" />
+    <ClInclude Include="PlayerComp.h" />
+    <ClInclude Include="PowerUpShield.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="RadialGravity.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="RotatingRoom.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="RotationalNoise.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ShiftingPlatform.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SpinMotor.h" />
+    <ClInclude Include="Temp_PlayerDie.h" />
+    <ClInclude Include="Terminal.h" />
+    <ClInclude Include="ThirdPersonCameraComponent.h" />
+    <ClInclude Include="Turret.h" />
+    <ClInclude Include="TurretSkinnedMesh.h" />
+    <ClInclude Include="UnitShield.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wwise_IDs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\Material\FloorTile_Pbr_0.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Ammopack.xml" />
+    <Xml Include="Assets\XML\Assembled\BossSmoke.xml" />
+    <Xml Include="Assets\XML\Assembled\BouncingBullet.xml" />
+    <Xml Include="Assets\XML\Assembled\Bullet.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\CarrierChargerBot.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\ChargerBot.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Crate.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\CrateWithSpiderBot.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\ElevatorEntranceCollider.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_BossCameraShake.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_BulletImpact_Metal.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_CameraShake.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_DirtDig.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_DirtDrop.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_ElevatorCameraShake.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_Explosion.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_ExplosionSpark.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_GroundEffect000.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_ShieldEffect000.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_LaserBurn.xml" />
+    <Xml Include="Assets\XML\Assembled\GPUParticleTest1.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Grappler.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\GrapplerClaw.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Healthpack.xml" />
+    <Xml Include="Assets\XML\Assembled\IKEmpty.xml" />
+    <Xml Include="Assets\XML\Assembled\IKEntity.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\IKGrapple.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\LaserWurmBoss.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Pickup_Ricochet.xml" />
+    <Xml Include="Assets\XML\Assembled\Pickup_Shield.xml" />
+    <Xml Include="Assets\XML\Assembled\SpiderBot.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\SpiderBotSpatter.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\TurretBullet.xml" />
+    <Xml Include="Assets\XML\Assembled\TurretSkinnedMesh.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmBoss.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmCarrier.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmClaw.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmConnection0.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmConnection1.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection2.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection3.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection4.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan0.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan1.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan2.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmHead.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmTail0.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmTail1.xml" />
+    <Xml Include="Assets\XML\Behavior\CarrierChargerBotAI.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\ChargerBotAI.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\ChargerBotRocketSpawnAI.xml" />
+    <Xml Include="Assets\XML\Behavior\GrapplerAI.xml" />
+    <Xml Include="Assets\XML\Behavior\PlayerTempAI.xml" />
+    <Xml Include="Assets\XML\Behavior\SpiderBotAI.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\TestBot.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\WurmBossAI.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Config.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\BossLevel.xml" />
+    <Xml Include="Assets\XML\Level\GameHUD.xml" />
+    <Xml Include="Assets\XML\Level\MainMenu.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\NewAssetLevel.xml" />
+    <Xml Include="Assets\XML\Level\Room.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\RoomWithWaypoints.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\Room_Exit.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\Room_Player.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Assets\XML\Level\TestLevel.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="HLSL\Barrier_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Blur_CS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Color_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Color_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\DebugSimpleColor_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Depth_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Font_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Font_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\InitDeadList_CS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\InitSortArgsCS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\LightingSkinned_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Lighting_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\Lighting_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Cube.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Quad.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Triangle.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleEmit_CS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleShared.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleUpdate_CS.hlsl">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\PbrFlow_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\PbrLighting_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableDebuggingInformation>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\PostProcessor_PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\PostProcessor_VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortCS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortInnerCS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortStepCS2.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

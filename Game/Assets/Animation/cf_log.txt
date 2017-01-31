@@ -1,0 +1,1 @@
+Warning: None triangle mesh: Alpha_Joints (file: 'C:\Users\Svochak\Perforce\BSvochak_P4_Workspace\Studios\1611 - Urnverse\Project Isolation\AutomatonAssault\Game\Assets\Animation\YBot_Running.fbx') [ (line 0)]

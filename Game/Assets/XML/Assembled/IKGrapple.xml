@@ -1,0 +1,13 @@
+<Assembled name="IKGrapple" tag="IK">
+  <Transform>
+    <Scale x="1" y="1" z="1"/>
+  </Transform>
+  <Components>
+    <IKObject/>
+    <Health Value="5"/>
+    <MeshRenderer RenderType ="PBR">
+      <Mesh file="Assets/Mesh/Grapple.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_TempFloor.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

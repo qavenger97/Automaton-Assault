@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material blend="AlphaBlend">
+  <Texture slot="0" file="Assets/Texture/RoundShadow.dds"/>
+  <Texture slot="2" file="Assets/Texture/Black2x2.dds"/>
+</Material>

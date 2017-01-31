@@ -1,0 +1,10 @@
+<Assembled name="WurmBoss" tag="Enemy">
+  <Transform>
+    <Scale x="1.0" y="1.0" z="1.0"/>
+  </Transform>
+  <Components>
+    <IKComponent drag_speed="1" rotation="0.0" frozen="false" Iteration="0" boss_name="FinalBoss"/>
+    <Health Value="100" />
+    <BehaviorTree type="WurmBossAI"/>
+  </Components>
+</Assembled>

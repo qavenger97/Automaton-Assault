@@ -1,0 +1,29 @@
+<BehaviorTree name="GrapplerAI">
+  <Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP></AI_HasHP>
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Sequence>
+          <AI_ToggleShield shield_on="true"/>
+          <AI_MoveToLoc completion_tolerance="0.3"/>
+          <RepeatUntilFail>
+            <Sequence>
+              <AI_RadialPatrol patrol_duration="5" patrol_radius="16.0" center_x="36.0" center_z="-9.0"/>
+              <AI_ToggleShield shield_on="false"/>
+              <AI_SpinClaw spin_time="3.0" rotation_speed="16.0"/>
+              <AI_ExtendClaw target_tag="Player" extend_duration="3.0"/>
+              <AI_TogglePlayerMovement movement_on="false"/>              
+              <AI_Grapple target_tag="Player" retract_speed="10.0" retract_tolerance="0.1" grapple_offset_z="0.5"/>
+              <AI_TogglePlayerMovement movement_on="true"/>
+              <AI_ToggleShield shield_on="true"/>
+            </Sequence>
+          </RepeatUntilFail>
+        </Sequence>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_TogglePlayerMovement movement_on="true"/> <!--Just in case the death happens while the player can't move-->
+    <AI_Die death_anim="death" pause_time="1.4" end_time="6.0" explode="true"/>
+  </Sequence>
+</BehaviorTree>

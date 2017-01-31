@@ -1,0 +1,36 @@
+<Assembled name="FX_Shield" tag="Particle">
+  <Components>
+    <PowerUpShield duration="5"/>
+    <GPUParticleEmitter
+          EmitterSpawnType ="Normal"
+          EmitterParticleType="Default"
+          EmitterParticleShape="Cube"
+          duration ="5"
+          spawnRate="1500"
+          gravityScale="0"
+        >
+      <ParticleFlags loop="false" playOnStart="true" keepAlive="true"/>
+      <Extent x="1" y="1" z="1"/>
+      <LifeTime min ="0.4" max = "0.8"/>
+
+      <RandomStartSizeMin x="0.006" y="0.006" z="0.006"/>
+      <RandomStartSizeMax x="0.012" y="0.012" z="0.012"/>
+
+      <StartSize x="5" y="5" z="5" />
+      <EndSize   x="1" y="1" z="1" />
+
+      <Speed start ="1.5" end="0.5"/>
+      <RandomStartSpeed min ="0" max="0"/>
+
+      <StartColor r="2" g="2" b="2" a="0.6"/>
+      <EndColor r="1" g="1" b="1" a="0.0"/>
+      <RandomStartColor r="2" g="2" b="1" a="1"/>
+      <RandomEndColor r="0.8" g="0.8" b="0.8" a="1"/>
+
+      <MinInitalVelocity x="-0.1" y="-0.1" z="-0.1"/>
+      <MaxInitalVelocity x="0.1" y="0.1" z="0.1"/>
+      <Mass min="1" max="20"/>
+
+    </GPUParticleEmitter>
+  </Components>
+</Assembled>

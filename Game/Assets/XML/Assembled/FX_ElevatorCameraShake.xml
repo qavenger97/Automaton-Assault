@@ -1,0 +1,5 @@
+<Assembled name="FX_ElevatorCameraShake">
+  <Components>
+    <CameraShakeEffect Duration="0.6" Fade="0.3" Amplitude="2.0" Roll="0.0"/>
+  </Components>
+</Assembled>

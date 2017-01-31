@@ -1,0 +1,47 @@
+<BehaviorTree name="CarrierChargerBotAI">
+  <Sequence>
+    <Sequence>
+      <!--Description: Lunging Sequence-->
+      <AI_ToggleShield shield_on="true"/>
+      <AI_ChargeUp anim="charge" duration="0.7"/>
+      <AI_Lunge dist="9.0" speed="27.0" anim="kick"
+                shadow_count="10" shadow_lifetime="0.2" shield_r="0.0" shield_g="0.8"
+                shield_b="0.8" shadow_r="0.3" shadow_g="0.0" shadow_b="0.6"/>
+      <AI_ToggleShield shield_on="false"/>
+    </Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP></AI_HasHP>
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Sequence>
+          <!--Description: Combat Sequence-->
+          <Chase target_tag="Player" stop_dist="9" speed="20.0" run_anim="run"/>
+          <AI_EnemyGrouping target_tag="Player" policy="add"/>
+          <Chase target_tag="Player" stop_dist="7" speed="20.0" run_anim="run"/>
+          <Selector>
+            <!--Description: Lunge If Alone-->
+            <Inverter>
+              <AI_IsPlayerAlone target_tag="Player"/>
+            </Inverter>
+            <Sequence>
+              <!--Description: Lunging Sequence-->
+              <AI_ToggleShield shield_on="true"/>
+              <AI_ChargeUp anim="charge" duration="0.7"/>
+              <AI_Lunge target_tag="Player" dist="9.0" speed="27.0" anim="kick"
+                        shadow_count="10" shadow_lifetime="0.2" shield_r="0.0" shield_g="0.8"
+                        shield_b="0.8" shadow_r="0.3" shadow_g="0.0" shadow_b="0.6"/>
+              <AI_ToggleShield shield_on="false"/>
+            </Sequence>
+          </Selector>
+          <Chase target_tag="Player" stop_dist="3.0" speed="20.0" run_anim="run"/>
+          <BhvAIAttack target_tag="Player" attack_interval="2.0" attack_dist="3.0"
+                       atk_anim_0="thrust" atk_anim_0_speed="2.0" atk_anim_1="kick"
+                       atk_anim_1_speed="2.0" atk_anim_2="backhand" atk_anim_2_speed="2.0"/>
+        </Sequence>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_EnemyGrouping target_tag="Player" policy="remove"/>
+    <AI_Die death_anim="death" pause_time="1.4" end_time="6.0" loot="0.15" explode="true"/>
+  </Sequence>
+</BehaviorTree>

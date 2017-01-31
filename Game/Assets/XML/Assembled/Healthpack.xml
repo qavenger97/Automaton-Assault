@@ -1,0 +1,12 @@
+<Assembled name="MedPack" tag="Pickup">
+  <Components>
+    <Light Type="Point" Range="3" Intensity="1">
+      <Color r="0.5" g="0.2" b="0.2" a="1.0" />
+    </Light>
+    <Pickup type ="Health" value="20"/>
+    <MeshRenderer RenderType="PBR">
+      <Mesh file="Assets/Mesh/pack.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_MedPack.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

@@ -1,0 +1,58 @@
+<BehaviorTree name="WurmBossAI">
+  <Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP/>
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Parallel policy="success">
+          <Sequence>
+            <!--<AI_KeypressToContinue/>-->
+            <AI_Tunnel/>
+            <AI_PositionCarrier/>
+            <AI_Surface surface_entity_name="FinalBossRadial" start_speed="-3.14" end_speed="-0.01" end_rotation="-2.0943951"/>
+            <AI_CarrierSpawnEnemies/>
+            <AI_ToggleWurmDoor state="open"/>
+            <AI_CarrierReleaseEnemies duration="5.0"/>
+            <AI_ToggleWurmDoor state="closed"/>
+            <AI_Surface surface_entity_name="FinalBossRadial" start_speed="-0.01" end_speed="-3.14" start_rotation ="-2.0943951" end_rotation="-4.1887902"/>
+            <AI_ToggleLaserHP on="true"/>
+            <Parallel policy="success">
+              <AI_PlayAudioEvent event_name="PLAY_BOSS_LEAVEGROUNDSHALLOW" delay="4" return_failure="true"/>              
+              <AI_Rise laser_entity_name="LaserWurmBoss"/>
+            </Parallel>
+            <Parallel policy="success">
+              <AI_PlayAudioEvent event_name="PLAY_BOSS_CHARGELASERBEAM" return_failure="true"/>
+              <AI_ChargeBeam duration="4" start_radius="0" end_radius="1000" start_intensity="0" end_intensity="100"/>
+              <AI_TurnTo velocity="40.0f"/>
+            </Parallel>
+            <Sequence>
+              <AI_ChargeBeam duration="0.2" start_radius="1000" end_radius="0" start_intensity="100" end_intensity="0"/>
+              <AI_ChargeBeam duration="0.1" start_radius="0" end_radius="1000" start_intensity="0" end_intensity="100"/>
+              <AI_ChargeBeam duration="0.1" start_radius="1000" end_radius="0" start_intensity="100" end_intensity="0"/>
+              <AI_ChargeBeam duration="0.1" start_radius="0" end_radius="1000" start_intensity="0" end_intensity="100"/>
+            </Sequence>
+            <AI_PlayAudioEvent event_name="STOP_BOSS_CHARGELASERBEAM"/>
+            <AI_FireLaser/>
+            <AI_ChargeBeam duration="0.41" start_radius="1000" end_radius="6" start_intensity="100" end_intensity="2"/>
+            <Parallel policy="success">
+              <AI_TurnTo velocity="10.0f" acceleration="0.5f"/>
+              <AI_LaserChase duration="5.0"/>
+            </Parallel>
+            <AI_FireLaser reverse="true"/>
+            <AI_AlignBossHead/>
+            <AI_ChargeBeam duration="0.35" start_radius="6" end_radius="0" start_intensity="2" end_intensity="0"/>
+            <AI_ToggleLaserHP on="false"/>
+            <Parallel policy="success">
+              <AI_PlayAudioEvent event_name="PLAY_BOSS_ENTERGROUND" delay="1.7" return_failure="true"/>
+              <AI_Tunnel entity_name="LaserWurmBoss" num_dives="1" dive_count="2"/>
+            </Parallel>
+            <AI_Teleport x="220" y="-25" z="100" />            
+          </Sequence>
+        </Parallel>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_EnemyGrouping target_tag="Player" policy="remove"/>
+    <AI_Die death_anim="death" pause_time="1.4" end_time="6.0"/>
+  </Sequence>
+</BehaviorTree>

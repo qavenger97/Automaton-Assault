@@ -1,0 +1,34 @@
+<Assembled name="FX_ExplosionSpark" tag="Particle">
+  <Components>
+    <GPUParticleEmitter
+      EmitterSpawnType ="Burst" 
+      EmitterParticleType="Velocity"
+      EmitterParticleShape="Cube" 
+      duration ="0.1" 
+      maxParticle = "500"
+      gravityScale="1"
+      >
+      <ParticleFlags loop="false" playOnStart="true"/>
+      <Extent x="0.01" y="0.01" z="0.01"/>
+      <LifeTime min ="0.4" max = "0.8"/>
+
+      <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+      <RandomStartSizeMax x="0.01" y="0.01" z="0.016"/>
+
+      <StartSize x="1" y="1" z="1" />
+      <EndSize   x="1" y="1" z="10" />
+
+      <Speed start ="1" end="1"/>
+      <RandomStartSpeed min ="0" max="0"/>
+
+      <StartColor r="2" g="2" b="1" a="1"/>
+      <EndColor r="1" g="1" b="1" a="0"/>
+      <RandomStartColor r="1" g="0.5" b="0" a="1"/>
+      <RandomEndColor r="1" g="1" b="0.5" a="1"/>
+
+      <MinInitalVelocity x="-5.0" y="-5.0" z="-5.0"/>
+      <MaxInitalVelocity x="5.0" y="5.0" z="5.0"/>
+      <Mass min="1" max="20"/>
+    </GPUParticleEmitter>
+  </Components>
+</Assembled>

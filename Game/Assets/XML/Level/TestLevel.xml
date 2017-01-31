@@ -1,0 +1,27 @@
+<Level>
+  <Entities>
+    <Entity name="Player" tag="Player">
+      <Transform>
+        <Position x="5.0" y="0.0" z="5.0"/>
+        <!-- Just using default rotation, otherwise it would be <Rotation pitch="5" yaw="5" roll="5"/> -->
+      </Transform>
+      <Components>
+        <PlayerComp speed="5.0"/>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Props/forklift.hmdl" />
+        </MeshRenderer>
+        <DynamicCollider>
+          <AABB>
+            <Min x="-1" y="-1" z="-1"/>
+            <Max x="1" y="1" z="1"/>
+          </AABB>
+        </DynamicCollider>
+      </Components>
+    </Entity>
+    <Assembled name="ChargerBot">
+      <Transform>
+        <Position x="5" y="5" z="5"/>
+      </Transform>
+    </Assembled>
+  </Entities>
+</Level>

@@ -1,0 +1,8 @@
+<BehaviorTree name="PlayerTempAI">
+  <Sequence>
+    <RepeatUntilFail>
+      <AI_HasHP></AI_HasHP>
+    </RepeatUntilFail>
+    <Temp_PlayerDie></Temp_PlayerDie>
+  </Sequence>
+</BehaviorTree>

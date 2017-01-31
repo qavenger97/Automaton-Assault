@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Assembled name="Crate" tag="Breakable">
+  <Components>
+    <MeshRenderer>
+      <Mesh file="Assets/Mesh/Props/Crate.hmdl" />
+      <Material file="Assets/Material/cratetex.xml" />
+    </MeshRenderer>
+    <DynamicCollider coll_group="5" IsRotated="1">
+      <AABB>
+        <Min x="-0.514481" y="-0.4848593" z="-0.5225401" />
+        <Max x="0.514481" y="0.4848593" z="0.5225401" />
+      </AABB>
+    </DynamicCollider>
+    <Health Value="1" />
+    <Crate />
+    <AudioSource />
+  </Components>
+</Assembled>

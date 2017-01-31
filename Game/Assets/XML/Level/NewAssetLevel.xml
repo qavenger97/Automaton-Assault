@@ -1,0 +1,33 @@
+<Level>
+  <Entities>
+    
+    <Entity name="spider" instanceId="-1756482">
+      <Transform>
+        <Position x="0" y="1" z="0"/>
+        <Rotation pitch="1.5707963" yaw="0" row="0"/>
+        <Scale x="0.013" y="0.013" z="0.013" />
+      </Transform>
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/spiderbot.hmdl" />
+          <Material file="Assets/Material/PBR/PBR_Spider_Bot.xml" />
+        </MeshRenderer>
+      </Components>
+    </Entity>
+
+    <Entity name ="Drone">
+      <Transform>
+        <Position x="5" y="1" z="-1.0"/>
+        <Rotation pitch="-0.3" yaw="2.141593" roll="0.3"/>
+        <Scale x="3" y="3" z="3"/>
+      </Transform>
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/Test/Drone.hmdl" />
+          <Material file="Assets/Material/PBR/PBR_Drone.xml"/>
+        </MeshRenderer>
+      </Components>
+    </Entity>
+
+  </Entities>
+</Level>

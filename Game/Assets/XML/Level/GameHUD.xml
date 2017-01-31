@@ -1,0 +1,70 @@
+<Level>
+  <Entities>
+    <Entity name="UI_Health">
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/UI_BarHold.hmdl"/>
+          <Material file="Assets/Material/PBR/PBR_Floor_Metal.xml" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="UI_HealthBar">
+          <Components>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_Bar.hmdl"/>
+              <Material file="Assets/Material/PBR/PBR_Emissive_red.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="UI_Light">
+          <Transform>
+            <Position x="5" y="0.5" z="-0.5676773" />
+          </Transform>
+          <Components>
+            <Light Type="Point" Range="2" Intensity="6.49">
+              <Color r="0.7" g="1" b="0.8" a="0.5" />
+            </Light>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+
+    <Entity name="UI_Ammo">
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/UI_BarHold.hmdl"/>
+          <Material file="Assets/Material/PBR/PBR_Floor_Metal.xml" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="UI_AmmoBar">
+          <Components>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_Bar.hmdl"/>
+              <Material file="Assets/Material/PBR/PBR_Emissive_blue.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+
+    <Entity name="UI_TotalAmmo">
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/UI_BarHold.hmdl"/>
+          <Material file="Assets/Material/PBR/PBR_Floor_Metal.xml" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="UI_TotalAmmoBar">
+          <Components>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_Bar.hmdl"/>
+              <Material file="Assets/Material/PBR/PBR_Emissive_green.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+  </Entities>
+</Level>

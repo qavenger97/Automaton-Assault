@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="AutomatonAssault.cpp" />
+    <ClCompile Include="PlayerComp.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorSet.cpp" />
+    <ClCompile Include="ComponentSet.cpp" />
+    <ClCompile Include="AssembledEntitySet.cpp" />
+    <ClCompile Include="ThirdPersonCameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelExit.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Chase.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="GunLogic.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySpawner.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthModule.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Temp_PlayerDie.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePch.cpp" />
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SpinMotor.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RadialGravity.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftingPlatform.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitShield.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GrapplerComp.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatingRoom.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Gate.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Terminal.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="IKObject.cpp" />
+    <ClCompile Include="IKComponent.cpp" />
+    <ClCompile Include="EntityGroup.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargerComp.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Crate.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Turret.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Laser.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorShadow.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Attack.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_ChargerRocketSpawn.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_ChargeUp.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Chase.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Die.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_EnemyGrouping.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_ExtendClaw.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Grapple.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_HasHP.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_IsInAtkRange.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_IsPlayerAlone.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Lunge.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_MoveToLoc.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_RadialPatrol.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_SpiderBotBehavior.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_SpinClaw.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_TogglePlayerMovement.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_ToggleShield.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Track.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="BhvAIAttack.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplodeExplode.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Tunnel.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="TurretSkinnedMesh.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_KeypressToContinue.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraShakeEffect.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="AI_Surface.cpp" />
+    <ClCompile Include="RotationalNoise.cpp" />
+    <ClCompile Include="AI_ToggleWurmDoor.cpp" />
+    <ClCompile Include="AI_CarrierSpawnEnemies.cpp" />
+    <ClCompile Include="AI_CarrierReleaseEnemies.cpp" />
+    <ClCompile Include="GameUtils.cpp" />
+    <ClCompile Include="AI_Rise.cpp" />
+    <ClCompile Include="AI_ChargeBeam.cpp" />
+    <ClCompile Include="AI_TurnTo.cpp" />
+    <ClCompile Include="PowerUpShield.cpp" />
+    <ClCompile Include="AI_FireLaser.cpp" />
+    <ClCompile Include="AI_LaserBurnStationary.cpp" />
+    <ClCompile Include="AI_Teleport.cpp" />
+    <ClCompile Include="AI_LaserChase.cpp" />
+    <ClCompile Include="AI_AlignBossHead.cpp" />
+    <ClCompile Include="AI_PositionCarrier.cpp" />
+    <ClCompile Include="AI_PlayAudioEvent.cpp" />
+    <ClCompile Include="AudioEventReceiver.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="BossComp.cpp" />
+    <ClCompile Include="BossAgent.cpp" />
+    <ClCompile Include="AI_ToggleLaserHP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutomatonAssault.h" />
+    <ClInclude Include="PlayerComp.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorSet.h" />
+    <ClInclude Include="ComponentSet.h" />
+    <ClInclude Include="AssembledEntitySet.h" />
+    <ClInclude Include="ThirdPersonCameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelExit.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Chase.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="GunLogic.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySpawner.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthModule.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Temp_PlayerDie.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSL\ConstBufferVS.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSL\SharedDefines.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePch.h" />
+    <ClInclude Include="MainMenu.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Wwise_IDs.h" />
+    <ClInclude Include="HLSL\ConstBufferPS.h">
+      <Filter>HLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinMotor.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RadialGravity.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftingPlatform.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitShield.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GrapplerComp.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatingRoom.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Terminal.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="IKObject.h" />
+    <ClInclude Include="IKComponent.h" />
+    <ClInclude Include="EntityGroup.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargerComp.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crate.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Turret.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Laser.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorShadow.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplodeExplode.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Attack.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_ChargerRocketSpawn.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_ChargeUp.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Chase.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Die.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_EnemyGrouping.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_ExtendClaw.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Grapple.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_HasHP.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_IsInAtkRange.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_IsPlayerAlone.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Lunge.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_MoveToLoc.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_RadialPatrol.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_SpiderBotBehavior.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_SpinClaw.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_TogglePlayerMovement.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_ToggleShield.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Track.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="BhvAIAttack.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Tunnel.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="TurretSkinnedMesh.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_KeypressToContinue.h">
+      <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMessage.h" />
+    <ClInclude Include="CameraShakeEffect.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Pickup.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Surface.h" />
+    <ClInclude Include="RotationalNoise.h" />
+    <ClInclude Include="AI_ToggleWurmDoor.h" />
+    <ClInclude Include="AI_CarrierSpawnEnemies.h" />
+    <ClInclude Include="AI_CarrierReleaseEnemies.h" />
+    <ClInclude Include="GameUtils.h" />
+    <ClInclude Include="AI_Rise.h" />
+    <ClInclude Include="AI_ChargeBeam.h" />
+    <ClInclude Include="AI_TurnTo.h" />
+    <ClInclude Include="PowerUpShield.h" />
+    <ClInclude Include="AI_FireLaser.h" />
+    <ClInclude Include="AI_LaserBurnStationary.h" />
+    <ClInclude Include="AI_Teleport.h" />
+    <ClInclude Include="AI_LaserChase.h" />
+    <ClInclude Include="AI_AlignBossHead.h" />
+    <ClInclude Include="AI_PositionCarrier.h" />
+    <ClInclude Include="AI_PlayAudioEvent.h" />
+    <ClInclude Include="AudioEventReceiver.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BossComp.h" />
+    <ClInclude Include="BossAgent.h" />
+    <ClInclude Include="AI_ToggleLaserHP.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{a33d4ff9-c1a3-4082-96ab-4a7717ad84a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behaviors">
+      <UniqueIdentifier>{b4a57429-33e2-4349-842a-774dd2347f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{ee200c54-1932-4ced-bf58-491e08d7ff0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Level">
+      <UniqueIdentifier>{8824965b-78de-4021-ac79-dd7ef429bb22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Behavior">
+      <UniqueIdentifier>{1c9da589-ec2d-4add-9478-e184da8b0d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Assembled">
+      <UniqueIdentifier>{0ecfec03-5730-4da9-beec-d88b4b27ed70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL">
+      <UniqueIdentifier>{8782ad27-46ff-4179-bd9f-38e9988938ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\XML\Config.xml">
+      <Filter>XML</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\TestLevel.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\TestBot.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Bullet.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\Room.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\ChargerBotAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\RoomWithWaypoints.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\PlayerTempAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\Room_Player.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\GameHUD.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\MainMenu.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\Room_Exit.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\ChargerBot.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\ChargerBotRocketSpawnAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\GrapplerAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Grappler.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\GrapplerClaw.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\IKEntity.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Crate.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\IKGrapple.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\Material\FloorTile_Pbr_0.xml">
+      <Filter>XML</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\SpiderBotAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\SpiderBot.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\GPUParticleTest1.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\SpiderBotSpatter.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\CrateWithSpiderBot.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_Explosion.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_ExplosionSpark.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_BulletImpact_Metal.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\TurretSkinnedMesh.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\WurmBossAI.xml">
+      <Filter>XML\Behavior</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmBoss.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\WurmHead.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection0.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection1.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection2.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection3.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnection4.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan0.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan1.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmConnectionFan2.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmTail0.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmTail1.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmCarrier.xml" />
+    <Xml Include="Assets\XML\Assembled\WurmClaw.xml" />
+    <Xml Include="Assets\XML\Assembled\IKEmpty.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_GroundEffect000.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_CameraShake.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_DirtDrop.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_DirtDig.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Ammopack.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Healthpack.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Level\NewAssetLevel.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\BouncingBullet.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Pickup_Ricochet.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\TurretBullet.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Behavior\CarrierChargerBotAI.xml" />
+    <Xml Include="Assets\XML\Assembled\CarrierChargerBot.xml" />
+    <Xml Include="Assets\XML\Assembled\ElevatorEntranceCollider.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_ElevatorCameraShake.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\LaserWurmBoss.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_ShieldEffect000.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\Pickup_Shield.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\FX_LaserBurn.xml" />
+    <Xml Include="Assets\XML\Assembled\FX_BossCameraShake.xml">
+      <Filter>XML\Assembled</Filter>
+    </Xml>
+    <Xml Include="Assets\XML\Assembled\BossSmoke.xml" />
+    <Xml Include="Assets\XML\Level\BossLevel.xml">
+      <Filter>XML\Level</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="HLSL\Color_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Color_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Font_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Font_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Lighting_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Lighting_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\LightingSkinned_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\PbrLighting_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleUpdate_CS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleEmit_CS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\InitDeadList_CS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleShared.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Quad.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Triangle.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS_Cube.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ParticleDraw_GS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Depth_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\DebugSimpleColor_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\PostProcessor_VS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\PostProcessor_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Blur_CS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortCS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortInnerCS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\SortStepCS2.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\InitSortArgsCS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Barrier_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\PbrFlow_PS.hlsl">
+      <Filter>HLSL</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HLSL\ShaderCommon.hlsli">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\ShaderCommon.hlsli">
+      <Filter>HLSL</Filter>
+    </None>
+    <None Include="HLSL\BRDF.hlsli">
+      <Filter>HLSL</Filter>
+    </None>
+  </ItemGroup>
+</Project>

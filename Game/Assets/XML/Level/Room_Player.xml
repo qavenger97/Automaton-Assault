@@ -1,0 +1,1963 @@
+<Level>
+  <Entities>
+    <Entity name="LaserBossHitBox" instanceId="-14330">
+      <Transform>
+        <Position x="220" y="0" z="86.5" />
+      </Transform>
+      <Components>
+        <BossComp/>
+        <Health Indirect ="true"/>
+        <DynamicCollider coll_group="1" IsRotated="1" enabled="false">
+          <AABB>
+            <Min x="-1.61" y="-8.57" z="-10.90151" />
+            <Max x="1.61" y="8.57" z="1.888492" />
+          </AABB>
+        </DynamicCollider>
+      </Components>
+    </Entity>
+    <Entity name="BlockPlayerAllowBullet" instanceId="19410">
+      <Transform>
+        <Position x="215.63" y="0.5" z="80.54" />
+      </Transform>
+      <Components>
+        <DynamicCollider coll_group="7" IsRotated="1">
+          <AABB>
+            <Min x="-19.5" y="0" z="-5.605" />
+            <Max x="25.5" y="6" z="6.105" />
+          </AABB>
+        </DynamicCollider>
+      </Components>
+    </Entity>
+    <!--<Entity name="SpinAlarmLight" instanceId="-1756482">
+      <Transform>
+        <Position x="5" y="1" z="5" />
+        <Scale x="0.01" y="0.01" z="0.01" />
+      </Transform>
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/ChargerBot_Run.hmdl" />
+          <Material file="Assets/Material/PBR/PBR_Railing.xml" />
+        </MeshRenderer>
+      </Components>
+    </Entity>-->
+    <!--<Assembled name="WurmBoss">
+      <Transform>
+        <Position x="225" y="-5" z="60"/>
+      </Transform>
+    </Assembled>-->
+    <Assembled name="LaserWurmBoss">
+      <Transform>
+        <Position x="220" y="-25" z="103" />
+        <Rotation yaw="3.14" pitch="-0.65" roll="0.0"/>
+      </Transform>
+    </Assembled>
+    <Entity name="Cylinder" instanceId="-1756482">
+      <Transform>
+        <Position x="21.671" y="1" z="21.668" />
+        <Scale x="0.5" y="1" z="0.5" />
+      </Transform>
+      <Components>
+        <MeshRenderer RenderType="PBR">
+          <Mesh file="Assets/Mesh/Cylinder1x2x1.hmdl" />
+          <Material file="Assets/Material/PBR/PBR_Railing.xml" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cylinder (1)" instanceId="-1827948">
+          <Transform>
+            <Position x="0" y="1.976" z="0" />
+            <Scale x="0.4" y="1" z="0.4" />
+          </Transform>
+          <Components>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/Cylinder1x2x1.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Railing.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cylinder (2)" instanceId="-1849736">
+          <Transform>
+            <Position x="0" y="3.155" z="0" />
+            <Scale x="0.5" y="0.2" z="0.5" />
+          </Transform>
+          <Components>
+            <SpinMotor speed="360" start_active="true"/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/Cylinder1x2x1.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Railing.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Sphere" instanceId="-1890850">
+              <Transform>
+                <Position x="0" y="0.3499985" z="0.4280014" />
+                <Scale x="0.4" y="0.5" z="0.4" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh/Sphere1x1x1.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_EmergencyGlow.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Sphere (1)" instanceId="-1928114">
+              <Transform>
+                <Position x="0" y="-0.2900004" z="0.4280014" />
+                <Scale x="0.4" y="0.5" z="0.4" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh/Sphere1x1x1.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_EmergencyGlow.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Spot light">
+              <Transform>
+                <Position x="0.0" y="0" z="0.0"/>
+                <Rotation pitch="0.15" yaw="0.0" roll="0.0"/>
+                <!-- Just using default rotation, otherwise it would be <Rotation pitch="5" yaw="5" roll="5"/> -->
+              </Transform>
+              <Components>
+                <Light Type="Spot" Range="25" Intensity="6" InnerRatio="0.95" OuterRatio="0.93">
+                  <Color r="1" g="0.2" b="0.2" a="1" />
+                </Light>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+      </Children>
+    </Entity>
+    <!--<Entity name="IKO">
+      <Transform>
+        <Position x="0" y="2" z="0"/>
+      </Transform>
+      <Components>
+        <IKComponent Count="50" Length="0.3" Iteration="0"/>
+      </Components>
+    </Entity>-->
+    <!--c-->
+
+    <Entity name="Player" tag="Player">
+      <Transform>
+        <Position x="0" y="1.0" z="0"/>
+        <Scale x="0.01" y="0.01" z="0.01"/>
+        <!-- Just using default rotation, otherwise it would be <Rotation pitch="5" yaw="5" roll="5"/> -->
+      </Transform>
+      <Components>
+        <!--IKComponent Count="10" Length="0.3" instance_name="IKGrapple" rotation="0.0"/>-->
+        <!--<IKComponent Count="10" Length="0.3"/>-->
+        <EntityGroup/>
+        <PlayerComp speed="5.0" dodge_speed="15.0" dodge_duration="0.5"/>
+        <Motor max_speed="2.0" enabled="false"/>
+        <!--This is currently being used by enemies to apply movement to the player [Brandon]-->
+        <BehaviorTree type="PlayerTempAI"/>
+        <Health Value="100"/>
+        <DynamicCollider coll_group="3">
+          <!--<AABB>
+            <Min x="-0.5" y="0" z="-0.5"/>
+            <Max x="0.5" y="2" z="0.5"/>
+          </AABB>-->
+          <Cylinder Radius="0.5" Height="2">
+            <Center x="0" y="0" z="0"/>
+          </Cylinder>
+        </DynamicCollider>              
+        <SkinnedMeshRenderer>
+          <Mesh file="Assets/Mesh/Vanguard_Gunplay.hmdl" />
+          <Material file="Assets/Material/PBR/PBR_Player.xml"/>
+        </SkinnedMeshRenderer>
+        <Animation>
+          <Clips>
+            <Clip name="default" file="Assets/Animation/Vanguard_Idle.hani" setAsStart="true" looping="true"/>
+            <Clip name="bwd"  file="Assets/Animation/Vanguard_Running_Back.hani" looping="false"/>
+            <Clip name="bwd_left"  file="Assets/Animation/Vanguard_Running_Back_Left.hani" looping="false"/>
+            <Clip name="bwd_right"  file="Assets/Animation/Vanguard_Running_Back_Right.hani" looping="false"/>
+            <Clip name="fwd_left"  file="Assets/Animation/Vanguard_Running_Forward_Left.hani" looping="false"/>
+            <Clip name="fwd_right"  file="Assets/Animation/Vanguard_Running_Forward_Right.hani" looping="false"/>
+            <Clip name="left"  file="Assets/Animation/Vanguard_Running_Left.hani" looping="false"/>
+            <Clip name="right"  file="Assets/Animation/Vanguard_Running_Right.hani" looping="false"/>
+            <Clip name="fwd"  file="Assets/Animation/Vanguard_Running.hani" looping="false"/>
+            <Clip name="fire" file="Assets/Animation/Vanguard_Firing_Rifle.hani" looping="false"/>
+            <Clip name="idle" file="Assets/Animation/Vanguard_Idle.hani" setAsStart="false" looping="true"/>
+            <Clip name="dodge" file="Assets/Animation/Vanguard_Dodge.hani" setAsStart="false" looping="false"/>
+          </Clips>
+        </Animation>
+      </Components>
+      <Children>
+        <Entity name="DodgeBody">
+          <Transform>
+            <Rotation pitch="0.0" yaw="3.141593" roll="0.0"/>
+          </Transform>
+          <Components>
+          </Components>
+        </Entity>
+        <Entity name="Upper" tag="Body">
+          <Components>
+            <Light Type="Spot" Range="10" Intensity="1" InnerRatio="0.8" OuterRatio="0.75">
+              <Color r="1" g="1" b="1" a="1" />
+            </Light>
+          </Components>
+          <Children>
+            <Entity name="GunPos">
+              <Transform>
+                <Position x="0" y="10" z="85"/>
+              </Transform>
+              <Components>
+                <!--Muzzle light-->
+                <Light Type="Point" Range="3" Intensity="1">
+                  <Color r="0.5" g="0.5" b="0.2" a="1.0" />
+                </Light>
+                <MeshRenderer>
+                  <Mesh file="Assets/Mesh\Laser.hmdl" />
+                  <Material file="Assets/Material/Laser.xml" />
+                </MeshRenderer>
+                <Laser/>
+              </Components>
+            </Entity>
+            <Entity name="ShotGun" tag="ShotGun">
+              <Transform>
+                <!--<Position x="2" y="0.62" z="5"/>-->
+                <!--<Scale x="100" y="100" z="100"/>-->
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh/player_gun.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Weapon.xml"/>
+                </MeshRenderer>
+                <GunLogic/>
+              </Components>
+              <Children>
+
+                <!--<Entity name ="BossTemp000">
+                  <Transform>
+                    <Position x="0" y="1" z="0.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Head.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Head.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+                <Entity name ="BossTemp001">
+                  <Transform>
+                    <Position x="0" y="1" z="0.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name ="fan000">
+                      <Transform>
+                      </Transform>
+                      <Components>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh/Boss_Connection_Fan_000.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml"/>
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                    <Entity name ="fan001">
+                      <Transform>
+                      </Transform>
+                      <Components>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh/Boss_Connection_Fan_001.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml"/>
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+                <Entity name ="BossTemp002">
+                  <Transform>
+                    <Position x="0" y="1" z="-380.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_001.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+
+                <Entity name ="BossTemp003">
+                  <Transform>
+                    <Position x="0" y="1" z="-630.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_002.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+
+                <Entity name ="BossTemp004">
+                  <Transform>
+                    <Position x="0" y="1" z="-730.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_003.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+
+                <Entity name ="BossTemp005">
+                  <Transform>
+                    <Position x="0" y="1" z="-930.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_004.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+                
+                <Entity name ="BossTemp006">
+                  <Transform>
+                    <Position x="0" y="1" z="-1070.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Carrier_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                      <Entity name ="Boss_Door_Left">
+                        <Transform>
+                        </Transform>
+                        <Components>
+                          <MeshRenderer RenderType="PBR">
+                            <Mesh file="Assets/Mesh/Boss_Carrier_Door_000.hmdl" />
+                            <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml"/>
+                          </MeshRenderer>
+                        </Components>
+                      </Entity>
+                      <Entity name ="Boss_Door_Right">
+                        <Transform>
+                        </Transform>
+                        <Components>
+                          <MeshRenderer RenderType="PBR">
+                            <Mesh file="Assets/Mesh/Boss_Carrier_Door_001.hmdl" />
+                            <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml"/>
+                          </MeshRenderer>
+                        </Components>
+                      </Entity>
+                    </Children>
+                </Entity>
+
+                <Entity name ="BossTemp007">
+                  <Transform>
+                    <Position x="0" y="1" z="-1550.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Connection_004.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+
+                <Entity name ="BossTemp008">
+                  <Transform>
+                    <Position x="0" y="1" z="-1690.0"/>
+                    <Scale x="100" y="100" z="100"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh/Boss_Tail_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml"/>
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name ="BossTail">
+                      <Transform>
+                      </Transform>
+                      <Components>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh/Boss_Tail_001.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml"/>
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>-->
+
+              </Children>
+            </Entity>
+            <Entity name="MachineGun" tag="MachineGun">
+              <Transform>
+                <!--<Position x="2" y="0.62" z="5"/>-->
+                <!--<Scale x="100" y="100" z="100"/>-->
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh/player_gun.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Weapon.xml"/>
+                </MeshRenderer>
+                <GunLogic/>
+              </Components>
+              <Children>
+                <Entity name="SpawnPos" tag="SpawnPos">
+                  <Transform>
+                    <Position x="0" y="0.15" z="0"/>
+                  </Transform>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="PlayerShadow">
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/FloorQuad.hmdl" />
+          <Material file="Assets/Material/FloorShadow.xml" />
+        </MeshRenderer>
+        <ActorShadow/>
+      </Components>
+    </Entity>
+    <Entity name="FinalBossLaser" instanceId="-2161176">
+      <Transform>
+        <Position x="225" y="-5" z="1000" />
+      </Transform>
+      <Components />
+      <Children>
+        <Entity name="Empty" tag="IK">
+          <Transform>
+            <Scale x="1" y="1" z="1"/>
+          </Transform>
+          <Components>
+            <IKObject/>
+            <Health Value="5"/>
+          </Components>
+        </Entity>
+        <Entity name="boss_head" instanceId="-1811358">
+          <Transform>
+            <Position x="0" y="0" z="-3" />
+          </Transform>
+          <Components>
+            <IKObject/>
+          </Components>
+          <Children>
+            <Entity name="boss_head_inner" instanceId="1811358">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\boss_head.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Head.xml" />
+                </MeshRenderer>
+              </Components>
+              <Children>
+                <Entity name="LaserEmissionPoint">
+                  <Transform>
+                    <Position x="0" y="0" z="3.5"/>
+                    <Scale x="20" y="20" z="1"/>
+                  </Transform>
+                  <Components>
+                    <MeshRenderer enabled="false">
+                      <Mesh file="Assets/Mesh/Laser.hmdl" />
+                      <Material file="Assets/Material/Laser.xml" />
+                    </MeshRenderer>
+                    <Laser radius="20.0" enabled="false" coll_mask="105"/>
+                  </Components>
+                </Entity>
+                <Entity name="WurmChargingLight">
+                  <Transform>
+                    <Position x="0" y="0" z="4"/>
+                    <Scale x="20" y="20" z="1"/>
+                  </Transform>
+                  <Components>
+                    <!--Muzzle light-->
+                    <Light Type="Point" Range="0.0001" Intensity="0.0001">
+                      <Color r="0.95f" g="0" b="0" a="1.0" />
+                    </Light>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_001" instanceId="-1778356">
+          <Transform>
+            <Position x="0" y="0" z="-3.1s" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_001.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Connection_003 (2)" instanceId="-1209126">
+          <Transform>
+            <Position x="0" y="0" z="-4.849998" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2033898">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_000" instanceId="-1188580">
+          <Transform>
+            <Position x="0" y="0" z="-6.93" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-1448818">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Connection_Fan_001" instanceId="-1469666">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_003" instanceId="-955390">
+          <Transform>
+            <Position x="0" y="0" z="-10.26" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2030244">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_004 (3)" instanceId="-2368098">
+          <Transform>
+            <Position x="0" y="0" z="-12.243" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Carrier_000" instanceId="-1545860">
+          <Transform>
+            <Position x="0" y="0" z="-13.76" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Carrier_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Carrier_Door_000" instanceId="-1643904">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Carrier_Door_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Carrier_Door_001" instanceId="-1645402">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Carrier_Door_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_003 (1)" instanceId="-1712618">
+          <Transform>
+            <Position x="0" y="0" z="-18.69" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2020720">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_000 (1)" instanceId="-1740758">
+          <Transform>
+            <Position x="0" y="0" z="-20.95" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-1740748">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Connection_Fan_001" instanceId="-1740738">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_004 (2)" instanceId="-1352366">
+          <Transform>
+            <Position x="0" y="0" z="-24.15" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Tail_000" instanceId="-883270">
+          <Transform>
+            <Position x="0" y="0" z="-25.67" />
+          </Transform>
+          <Components>
+            <IKObject/>
+          </Components>
+          <Children>
+            <Entity name="FX_DirtDropTail">
+              <Transform>
+                <Position x="-0.5" y="1" z="-1.5" />
+                <Rotation pitch="0.0" yaw="-1.57079632=" roll="0.0"/>
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Default"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "2000"
+                  gravityScale="1"
+                >
+                  <ParticleFlags loop="true" playOnStart="true" local ="false"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "1.5"/>
+
+                  <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+                  <RandomStartSizeMax x="0.03" y="0.03" z="0.03"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="1" y="8" z="1" />
+
+                  <Speed start ="1" end="1"/>
+                  <RandomStartSpeed min = "-4" max="-2"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+                  
+                  <MinInitalVelocity x="-0.1" y="0.0" z="-0.1"/>
+                  <MaxInitalVelocity x="0.1" y="0.0" z="0.1"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="FX_DirtDropTail">
+              <Transform>
+                <Position x="0.5" y="1" z="-1.5" />
+                <Rotation pitch="0.0" yaw="1.57079632=" roll="0.0"/>
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Default"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "2000"
+                  gravityScale="1"
+                >
+
+                  <ParticleFlags loop="true" playOnStart="true" local ="false"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "1.5"/>
+
+                  <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+                  <RandomStartSizeMax x="0.03" y="0.03" z="0.03"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="1" y="8" z="1" />
+
+                  <Speed start ="1" end="1"/>
+                  <RandomStartSpeed min = "-4" max="-2"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+
+                  <MinInitalVelocity x="-0.1" y="0.0" z="-0.1"/>
+                  <MaxInitalVelocity x="0.1" y="0.0" z="0.1"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="FX_DirtDigTail">
+              <Transform>
+                <Position x="0" y="-0.7" z="-2.3" />
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Velocity"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "3000"
+                  gravityScale="1"
+                >
+                  <ParticleFlags loop="true" playOnStart="true"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "0.9"/>
+
+                  <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                  <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="0.6" y="0.6" z="0.6" />
+
+                  <Speed start ="3" end="1"/>
+                  <RandomStartSpeed min = "-3" max="-1"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+                  
+                  <MinInitalVelocity x="-0.7" y="3.0" z="-0.7"/>
+                  <MaxInitalVelocity x="0.7" y="4.5" z="0.7"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Tail_000" instanceId="-883270">
+              <Components>                
+                <SpinMotor speed="-45" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Tail_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+              <Children>
+                <Entity name="Boss_Tail_001" instanceId="-886720">
+                  <Transform>
+                    <Position x="0" y="0" z="0" />
+                  </Transform>
+                  <Components>
+                    <SpinMotor speed="45" start_active="true" spin_type="roll"/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Tail_001.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="FinalBoss" instanceId="-2161176">
+      <Transform>
+        <Position x="225" y="-5" z="75.6" />
+      </Transform>
+      <Components />
+      <Children>
+        <Entity name="Empty" tag="IK">
+          <Transform>
+            <Scale x="1" y="1" z="1"/>
+          </Transform>
+          <Components>
+            <IKObject/>
+            <Health Value="5"/>
+          </Components>
+        </Entity>
+        <Entity name="boss_head" instanceId="-1811358">
+          <Transform>
+            <Position x="0" y="0" z="-3" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\boss_head.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Head.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Red Spot light">
+              <Transform>
+                <Position x="0.0" y="0" z="3.8"/>
+              </Transform>
+              <Components>
+                <Light Type="Spot" Range="25" Intensity="100" InnerRatio="0.94" OuterRatio="0.93">
+                  <Color r="1" g="0.2" b="0.2" a="1" />
+                </Light>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_001" instanceId="-1778356">
+          <Transform>
+            <Position x="0" y="0" z="-3" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_001.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Connection_003 (2)" instanceId="-1209126">
+          <Transform>
+            <Position x="0" y="0" z="-4.849998" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2033898">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_000" instanceId="-1188580">
+          <Transform>
+            <Position x="0" y="0" z="-6.93" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-1448818">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Connection_Fan_001" instanceId="-1469666">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_003" instanceId="-955390">
+          <Transform>
+            <Position x="0" y="0" z="-10.26" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2030244">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_004 (3)" instanceId="-2368098">
+          <Transform>
+            <Position x="0" y="0" z="-12.243" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Carrier_000" instanceId="-1545860">
+          <Transform>
+            <Position x="0" y="0" z="-13.76" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Carrier_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Carrier_Door_000" instanceId="-1643904">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Carrier_Door_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Carrier_Door_001" instanceId="-1645402">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Carrier_Door_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_003 (1)" instanceId="-1712618">
+          <Transform>
+            <Position x="0" y="0" z="-18.69" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_002" instanceId="-2020720">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_000 (1)" instanceId="-1740758">
+          <Transform>
+            <Position x="0" y="0" z="-20.95" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+            </MeshRenderer>
+          </Components>
+          <Children>
+            <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-1740748">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Connection_Fan_001" instanceId="-1740738">
+              <Transform>
+                <Position x="0" y="0" z="0" />
+              </Transform>
+              <Components>
+                <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                </MeshRenderer>
+              </Components>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="Boss_Connection_004 (2)" instanceId="-1352366">
+          <Transform>
+            <Position x="0" y="0" z="-24.15" />
+          </Transform>
+          <Components>
+            <IKObject/>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Boss_Tail_000" instanceId="-883270">
+          <Transform>
+            <Position x="0" y="0" z="-25.67" />
+          </Transform>
+          <Components>
+            <IKObject/>
+          </Components>
+          <Children>
+            <Entity name="FX_DirtDropTail">
+              <Transform>
+                <Position x="-0.5" y="1" z="-1.5" />
+                <Rotation pitch="0.0" yaw="-1.57079632=" roll="0.0"/>
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Default"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "2000"
+                  gravityScale="1"
+                >
+                  <ParticleFlags loop="true" playOnStart="true" local ="false"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "1.5"/>
+
+                  <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+                  <RandomStartSizeMax x="0.03" y="0.03" z="0.03"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="1" y="8" z="1" />
+
+                  <Speed start ="1" end="1"/>
+                  <RandomStartSpeed min = "-4" max="-2"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+                  
+                  <MinInitalVelocity x="-0.1" y="0.0" z="-0.1"/>
+                  <MaxInitalVelocity x="0.1" y="0.0" z="0.1"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="FX_DirtDropTail">
+              <Transform>
+                <Position x="0.5" y="1" z="-1.5" />
+                <Rotation pitch="0.0" yaw="1.57079632=" roll="0.0"/>
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Default"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "2000"
+                  gravityScale="1"
+                >
+
+                  <ParticleFlags loop="true" playOnStart="true" local ="false"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "1.5"/>
+
+                  <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+                  <RandomStartSizeMax x="0.03" y="0.03" z="0.03"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="1" y="8" z="1" />
+
+                  <Speed start ="1" end="1"/>
+                  <RandomStartSpeed min = "-4" max="-2"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+                  
+                  <MinInitalVelocity x="-0.1" y="0.0" z="-0.1"/>
+                  <MaxInitalVelocity x="0.1" y="0.0" z="0.1"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="FX_DirtDigTail">
+              <Transform>
+                <Position x="0" y="-0.7" z="-2.3" />
+              </Transform>
+              <Components>
+                <GPUParticleEmitter
+                  EmitterSpawnType ="Normal"
+                  EmitterParticleType="Velocity"
+                  EmitterParticleShape="Cube"
+                  duration ="5"
+                  spawnRate = "5000"
+                  gravityScale="1"
+                >
+                  <ParticleFlags loop="true" playOnStart="true"/>
+                  <Extent x="1.5" y="0.3" z="2"/>
+                  <LifeTime min ="0.3" max = "0.9"/>
+
+                  <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                  <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                  <StartSize x="0.4" y="0.4" z="0.4" />
+                  <EndSize   x="0.6" y="0.6" z="0.6" />
+
+                  <Speed start ="3" end="1"/>
+                  <RandomStartSpeed min = "-3" max="-1"/>
+
+                  <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                  <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                  <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+                  <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+
+                  <MinInitalVelocity x="-0.7" y="3.0" z="-0.7"/>
+                  <MaxInitalVelocity x="0.7" y="4.5" z="0.7"/>
+                  <Mass min="1" max="1"/>
+                </GPUParticleEmitter>
+              </Components>
+            </Entity>
+            <Entity name="Boss_Tail_000" instanceId="-883270">
+              <Components>
+                <SpinMotor speed="-45" start_active="true" spin_type="roll"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Tail_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+              <Children>
+                <Entity name="Boss_Tail_001" instanceId="-886720">
+                  <Transform>
+                    <Position x="0" y="0" z="0" />
+                  </Transform>
+                  <Components>
+                    <SpinMotor speed="45" start_active="true" spin_type="roll"/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Tail_001.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="FinalBossRadial" instanceId="-456238">
+      <Transform>
+        <Position x="225" y="-10.24" z="69.13" />
+      </Transform>
+      <Components />
+      <Children>
+        <Entity name="GameObject" instanceId="-273966">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.403714" yaw="1.570796" roll="0" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-273280">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="boss_head" instanceId="-1684">
+                  <Transform>
+                    <Position x="0" y="0" z="-1.84" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\boss_head.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Head.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-263000">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.185373" yaw="1.570796" roll="0" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-259820">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_001" instanceId="-6710">
+                  <Transform>
+                    <Position x="0" y="0" z="1.160004" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_001.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-249182">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.026025" yaw="1.570796" roll="0" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-242212">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_003 (2)" instanceId="-7178">
+                  <Transform>
+                    <Position x="0" y="0" z="0.91" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Connection_Fan_002" instanceId="-2166">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject (1)" instanceId="-192940">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="4.801399" yaw="1.570796" roll="0" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-176400">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_000" instanceId="-2898">
+                  <Transform>
+                    <Position x="0" y="0" z="1.849998" />
+                  </Transform>
+                  <Components>
+                    <RotationalNoise/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-5326">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                    <Entity name="Boss_Connection_Fan_001" instanceId="-1866">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-130654">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="4.822344" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-155220">
+              <Transform>
+                <Position x="0" y="11.9" z="0.04000092" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_003" instanceId="-3128">
+                  <Transform>
+                    <Position x="0" y="0" z="0.8799981" />
+                  </Transform>
+                  <Components>
+                    <RotationalNoise/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Connection_Fan_002" instanceId="-3120">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                    <Entity name="FX_DirtDigTail">
+                      <Transform>
+                        <Position x="1" y="0" z="0" />
+                        <Rotation yaw="3.14"/>
+                      </Transform>
+                      <Components>
+                        <GPUParticleEmitter
+                          EmitterSpawnType ="Normal"
+                          EmitterParticleType="Velocity"
+                          EmitterParticleShape="Cube"
+                          duration ="5"
+                          spawnRate = "5000"
+                          gravityScale="1"
+                    >
+                          <ParticleFlags loop="true" playOnStart="true"/>
+                          <Extent x="1.5" y="0.3" z="2"/>
+                          <LifeTime min ="0.3" max = "0.9"/>
+
+                          <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                          <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                          <StartSize x="0.2" y="0.2" z="0.2" />
+                          <EndSize   x="0.4" y="0.4" z="0.4" />
+
+                          <Speed start ="3" end="1"/>
+                          <RandomStartSpeed min = "-3" max="-1"/>
+
+                          <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                          <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                          <RandomStartColor r="0.6" g="0.4" b="0.1" a="1"/>
+                          <RandomEndColor r="0.7" g="0.45" b="0.1" a="1"/>
+
+                          <MinInitalVelocity x="-0.45" y="1.9" z="-0.45"/>
+                          <MaxInitalVelocity x="0.45" y="3.2" z="0.45"/>
+                          <Mass min="1" max="1"/>
+                        </GPUParticleEmitter>
+                        <GPUParticleEmitter
+                          EmitterSpawnType ="Normal"
+                          EmitterParticleType="Velocity"
+                          EmitterParticleShape="Cube"
+                          duration ="5"
+                          spawnRate = "5000"
+                          gravityScale="1"
+                    >
+                          <ParticleFlags loop="true" playOnStart="true"/>
+                          <Extent x="1.5" y="0.3" z="-2"/>
+                          <LifeTime min ="0.3" max = "0.9"/>
+
+                          <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                          <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                          <StartSize x="0.2" y="0.2" z="0.2" />
+                          <EndSize   x="0.4" y="0.4" z="0.4" />
+
+                          <Speed start ="3" end="1"/>
+                          <RandomStartSpeed min = "-3" max="-1"/>
+
+                          <StartColor r="0.2" g="0.2" b="0.2" a="1"/>
+                          <EndColor r="0.05" g="0.05" b="0.05" a="0.5"/>
+                          <RandomStartColor r="0.3" g="0.2" b="0.1" a="1"/>
+                          <RandomEndColor r="0.35" g="0.225" b="0.1" a="1"/>
+
+                          <MinInitalVelocity x="-0.35" y="1.5" z="-0.35"/>
+                          <MaxInitalVelocity x="0.35" y="2.24" z="0.35"/>
+                          <Mass min="1" max="1"/>
+                        </GPUParticleEmitter>
+                      </Components>
+                    </Entity>
+                    <Entity name="SmokeParticleFan01" instanceId="-3120">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                        <Rotation pitch="-1.5" roll="1.5"/>
+                      </Transform>
+                      <Components>
+                        <GPUParticleEmitter
+                          EmitterSpawnType ="Normal"
+                          EmitterParticleType="BillBoard"
+                          EmitterParticleShape="Quad"
+                          duration ="0.5"
+                          maxParticle = "1500"
+                          spawnRate="60"
+                          gravityScale="0"
+                          >
+                          <ParticleFlags loop="true" playOnStart="true" keepAlive="true"/>
+                          <Extent x="0.05" y="0.05" z="0.05"/>
+                          <LifeTime min ="0.4" max = "0.8"/>
+
+                          <RandomStartSizeMin x="0.03" y="0.03" z="0.03"/>
+                          <RandomStartSizeMax x="0.06" y="0.06" z="0.06"/>
+
+                          <StartSize x="1" y="1" z="1" />
+                          <EndSize   x="5" y="5" z="5" />
+
+                          <Speed start ="1.5" end="0.5"/>
+                          <RandomStartSpeed min ="1" max="3"/>
+
+                          <StartColor r=".6" g=".6" b=".6" a="0.1"/>
+                          <EndColor r="0.1" g="0.1" b="0.1" a="0.01"/>
+                          <RandomStartColor r="0.8" g="0.8" b="0.8" a="1"/>
+                          <RandomEndColor r="0.8" g="0.8" b="0.8" a="1"/>
+
+                          <MinInitalVelocity x="-0.1" y="0.1" z="-0.1"/>
+                          <MaxInitalVelocity x="0.3" y="0.6" z="0.3"/>
+                          <Mass min="1" max="20"/>
+
+                          <Material file="Assets/Material/Vanguard_Charger_Material.xml"/>
+                        </GPUParticleEmitter>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-113472">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.001241" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-103436">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_004 (3)" instanceId="-6704">
+                  <Transform>
+                    <Position x="0" y="0" z="1.130002" />
+                  </Transform>
+                  <Components>
+                    <RotationalNoise/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-89010">
+          <Transform>
+            <Position x="-10.30569" y="-5.950001" z="0" />
+            <Rotation pitch="5.235988" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="Boss_Carrier_000" tag="RadialCarrier" instanceId="-6894">
+              <Transform>
+                <Position x="0" y="0" z="2.529999" />
+              </Transform>
+              <Components>
+                <BossComp/>
+                <Health Indirect ="true"/>
+                <DynamicCollider coll_group="3">
+                  <AABB>
+                    <Min x="-1.5" y="-1.5" z="-10.5" />
+                    <Max x="1.5" y="1.5" z="5.5" />
+                  </AABB>
+                </DynamicCollider>
+                <RotationalNoise max_angle="0.05"/>
+                <MeshRenderer RenderType="PBR">
+                  <Mesh file="Assets/Mesh\Boss_Carrier_000.hmdl" />
+                  <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                </MeshRenderer>
+              </Components>
+              <Children>
+                <Entity name="Boss_Carrier_Door_000" tag="back_wurm_door" instanceId="-6486">
+                  <Transform>
+                    <Position x="0" y="0" z="0" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Carrier_Door_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+                <Entity name="Boss_Carrier_Door_001" tag="front_wurm_door" instanceId="-7486">
+                  <Transform>
+                    <Position x="0" y="0" z="0" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Carrier_Door_001.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject" instanceId="-288762">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.513146" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-288078">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Connection_003 (1)" instanceId="-7308">
+                  <Transform>
+                    <Position x="0" y="0" z="1.15" />
+                  </Transform>
+                  <Components>
+                    <RotationalNoise/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_003.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Connection_Fan_002" instanceId="-1068">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="-120" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_002.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject (2)" instanceId="-305840">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.733407" yaw="4.712389" roll="3.141593" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-304038">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="FX_DirtDigTail">
+                  <Transform>
+                    <Position x="1" y="0" z="0" />
+                  </Transform>
+                  <Components>
+                    <GPUParticleEmitter
+                      EmitterSpawnType ="Normal"
+                      EmitterParticleType="Velocity"
+                      EmitterParticleShape="Cube"
+                      duration ="5"
+                      spawnRate = "5000"
+                      gravityScale="1"
+                    >
+                      <ParticleFlags loop="true" playOnStart="true"/>
+                      <Extent x="1.5" y="0.3" z="2"/>
+                      <LifeTime min ="0.3" max = "0.9"/>
+
+                      <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                      <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                      <StartSize x="0.2" y="0.2" z="0.2" />
+                      <EndSize   x="0.4" y="0.4" z="0.4" />
+
+                      <Speed start ="3" end="1"/>
+                      <RandomStartSpeed min = "-3" max="-1"/>
+
+                      <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+                      <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+                      <RandomStartColor r="0.6" g="0.4" b="0.1" a="1"/>
+                      <RandomEndColor r="0.7" g="0.45" b="0.1" a="1"/>
+
+                      <MinInitalVelocity x="-0.45" y="1.9" z="-0.45"/>
+                      <MaxInitalVelocity x="0.45" y="3.2" z="0.45"/>
+                      <Mass min="1" max="1"/>
+                    </GPUParticleEmitter>
+                    <GPUParticleEmitter
+                      EmitterSpawnType ="Normal"
+                      EmitterParticleType="Velocity"
+                      EmitterParticleShape="Cube"
+                      duration ="5"
+                      spawnRate = "5000"
+                      gravityScale="1"
+                    >
+                      <ParticleFlags loop="true" playOnStart="true"/>
+                      <Extent x="1.5" y="0.3" z="2"/>
+                      <LifeTime min ="0.3" max = "0.9"/>
+
+                      <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+                      <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+                      <StartSize x="0.2" y="0.2" z="0.2" />
+                      <EndSize   x="0.4" y="0.4" z="0.4" />
+
+                      <Speed start ="3" end="1"/>
+                      <RandomStartSpeed min = "-3" max="-1"/>
+
+                      <StartColor r="0.2" g="0.2" b="0.2" a="1"/>
+                      <EndColor r="0.05" g="0.05" b="0.05" a="0.5"/>
+                      <RandomStartColor r="0.3" g="0.2" b="0.1" a="1"/>
+                      <RandomEndColor r="0.35" g="0.225" b="0.1" a="1"/>
+
+                      <MinInitalVelocity x="-0.35" y="1.5" z="-0.35"/>
+                      <MaxInitalVelocity x="0.35" y="2.24" z="0.35"/>
+                      <Mass min="1" max="1"/>
+                    </GPUParticleEmitter>
+                  </Components>
+                </Entity>
+                <Entity name="SmokeParticleFan01" instanceId="-3120">
+                      <Transform>
+                        <Position x="0" y="0" z="2" />
+                        <Rotation pitch="-1.5" roll="1.5"/>
+                      </Transform>
+                      <Components>
+                        <GPUParticleEmitter
+                          EmitterSpawnType ="Normal"
+                          EmitterParticleType="BillBoard"
+                          EmitterParticleShape="Quad"
+                          duration ="0.5"
+                          maxParticle = "1500"
+                          spawnRate="60"
+                          gravityScale="0"
+                          >
+                          <ParticleFlags loop="true" playOnStart="true" keepAlive="true"/>
+                          <Extent x="0.05" y="0.05" z="0.05"/>
+                          <LifeTime min ="0.4" max = "0.8"/>
+
+                          <RandomStartSizeMin x="0.03" y="0.03" z="0.03"/>
+                          <RandomStartSizeMax x="0.06" y="0.06" z="0.06"/>
+
+                          <StartSize x="1" y="1" z="1" />
+                          <EndSize   x="5" y="5" z="5" />
+
+                          <Speed start ="1.5" end="0.5"/>
+                          <RandomStartSpeed min ="1" max="3"/>
+
+                          <StartColor r=".6" g=".6" b=".6" a="0.1"/>
+                          <EndColor r="0.1" g="0.1" b="0.1" a="0.01"/>
+                          <RandomStartColor r="0.8" g="0.8" b="0.8" a="1"/>
+                          <RandomEndColor r="0.8" g="0.8" b="0.8" a="1"/>
+
+                          <MinInitalVelocity x="-0.1" y="0.1" z="-0.1"/>
+                          <MaxInitalVelocity x="0.3" y="0.6" z="0.3"/>
+                          <Mass min="1" max="20"/>
+
+                          <Material file="Assets/Material/Vanguard_Charger_Material.xml"/>
+                        </GPUParticleEmitter>
+                      </Components>
+                    </Entity>
+                <Entity name="Boss_Connection_000 (1)" instanceId="-5570">
+                  <Transform>
+                    <Position x="0" y="0" z="1.919998" />
+                  </Transform>
+                  <Components>
+                    <RotationalNoise/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Connection_Fan_000 (1)" instanceId="-7256">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_000.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                    <Entity name="Boss_Connection_Fan_001" instanceId="-4426">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="90" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Connection_Fan_001.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Connection.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject (3)" instanceId="-320906">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="5.931153" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-318754">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>                
+                <Entity name="Boss_Connection_004 (2)" instanceId="-3470">
+                  <Transform>
+                    <Position x="0" y="0" z="1" />
+                  </Transform>
+                  <Components>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Connection_004.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Connection001.xml" />
+                    </MeshRenderer>
+                  </Components>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+        <Entity name="GameObject (4)" instanceId="-334366">
+          <Transform>
+            <Position x="0" y="0" z="0" />
+            <Rotation pitch="6.110398" yaw="4.712389" roll="3.141593" />
+          </Transform>
+          <Components />
+          <Children>
+            <Entity name="GameObject" instanceId="-333686">
+              <Transform>
+                <Position x="0" y="11.9" z="0" />
+              </Transform>
+              <Components />
+              <Children>
+                <Entity name="Boss_Tail_000" instanceId="-1486">
+                  <Transform>
+                    <Position x="0" y="0" z="1.769997" />
+                  </Transform>
+                  <Components>
+                    <SpinMotor speed="-45" start_active="true" spin_type="roll"/>
+                    <MeshRenderer RenderType="PBR">
+                      <Mesh file="Assets/Mesh\Boss_Tail_000.hmdl" />
+                      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                    </MeshRenderer>
+                  </Components>
+                  <Children>
+                    <Entity name="Boss_Tail_001" instanceId="-1012">
+                      <Transform>
+                        <Position x="0" y="0" z="0" />
+                      </Transform>
+                      <Components>
+                        <SpinMotor speed="-45" start_active="true" spin_type="roll"/>
+                        <MeshRenderer RenderType="PBR">
+                          <Mesh file="Assets/Mesh\Boss_Tail_001.hmdl" />
+                          <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+                        </MeshRenderer>
+                      </Components>
+                    </Entity>
+                  </Children>
+                </Entity>
+              </Children>
+            </Entity>
+          </Children>
+        </Entity>
+      </Children>
+    </Entity>
+  </Entities>
+</Level>

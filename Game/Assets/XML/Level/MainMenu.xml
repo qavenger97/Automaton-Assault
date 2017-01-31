@@ -1,0 +1,274 @@
+<Level>
+  <Entities>
+    <Entity name="MainMenu">
+      <Transform>
+        <Position x="50" y="50" z="0"/>
+      </Transform>
+      <Components>
+        <MainMenu/>
+      </Components>
+      <Children>
+        <Entity name="Background">
+          <Transform>
+            <Scale x="-1" y="1" z="-1"/>
+          </Transform>
+          <Components>
+            <MeshRenderer RenderType="PBR_FLOW">
+              <Mesh file="Assets/Mesh/UI_Background.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_UI_Background.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        
+        <Entity name="UI_TITLE">
+          <Transform>
+            <Position x="-27.288" y="7.9" z="-42.508"/>
+            <Scale x="-30" y="130" z="-130"/>
+          </Transform>
+          <Components>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_TITLE.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_EmergencyGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        
+        <Entity name="UI_TUNNEL">
+          <Transform>
+            <Position x="0" y="0" z="435.353"/>
+            <Scale x="-100" y="100" z="-100"/>
+          </Transform>
+          <Components>
+            <MeshRenderer  RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_TUNNEL.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_UI_Tunnel.xml"/>
+            </MeshRenderer>
+            
+          </Components>
+        </Entity>
+          
+        <Entity name="BTN_NewGame">
+          <Transform>
+            <Position x="-26.712" y="1.052" z="-42.508"/>
+            <Scale x="-1" y="1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.840519" y="-1.58602" z="-11.3348"/>
+                <Max x="0.840519" y="1.58602" z="11.3348"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_NEWGAME.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+
+        <Entity name="BTN_Restart">
+          <Transform>
+            <Position x="-26.712" y="1.052" z="-42.508"/>
+            <Scale x="-1" y="1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.840519" y="-1.58602" z="-11.3348"/>
+                <Max x="0.840519" y="1.58602" z="11.3348"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_RESTART.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        
+        <Entity name="BTN_Option">
+          <Transform>
+            <Position x="-26.712" y="-5.708" z="-42.508"/>
+            <Scale x="-1" y="1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.840519" y="-1.58602" z="-11.3348"/>
+                <Max x="0.840519" y="1.58602" z="11.3348"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_OPTION.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+
+        <Entity name="BTN_Exit">
+          <Transform>
+            <Position x="-26.712" y="-12.764" z="-42.508"/>
+            <Scale x="-1" y="1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.840519" y="-1.58602" z="-11.3348"/>
+                <Max x="0.840519" y="1.58602" z="11.3348"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_EXIT.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+
+        <Entity name="BTN_BACK">
+          <Transform>
+            <Position x="-8.5" y="27.3" z="-42.508"/>
+            <Scale x="-1" y="0.1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.835203" y="-0.1875" z="-5"/>
+                <Max x="0.835203" y="0.1875" z="5"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_BACK.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+
+        <Entity name="BTN_VSYNC">
+          <Transform>
+            <Position x="8.5" y="27.3" z="-42.508"/>
+            <Scale x="-1" y="0.1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.835203" y="-0.1875" z="-5"/>
+                <Max x="0.835203" y="0.1875" z="5"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_VSYNC_ON.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+
+        <Entity name="BTN_BLOOM">
+          <Transform>
+            <Position x="3.5" y="27.3" z="-42.508"/>
+            <Scale x="-1" y="0.1" z="-1"/>
+          </Transform>
+          <Components>
+            <DynamicCollider>
+              <AABB>
+                <Min x="-0.835203" y="-0.1875" z="-5"/>
+                <Max x="0.835203" y="0.1875" z="5"/>
+              </AABB>
+            </DynamicCollider>
+            <MeshRenderer RenderType="PBR">
+              <Mesh file="Assets/Mesh/UI_BLOOM_ON.hmdl" />
+              <Material file="Assets/Material/PBR/PBR_VatGlow.xml"/>
+            </MeshRenderer>
+          </Components>
+        </Entity>
+    
+        <Entity name="PlayerPos">
+          <Transform>
+            <Position x="0" y="-0.453m" z="-42.508"/>
+            <Rotation pitch="0" yaw="-1.5707963" roll="0"/>
+          </Transform>
+          <Components>
+          </Components>
+        </Entity>
+
+        <Entity name="DesirePosition">
+          <Transform>
+            <Position x="0" y="-0.453m" z="-60.167"/>
+          </Transform>
+          <Components>
+          </Components>
+        </Entity>
+
+        <Entity name="Menu Light 4">
+          <Transform>
+            <Position x="0" y="0" z="39.145"/>
+          </Transform>
+          <Components>
+            <Light Type="Point" Range="40" Intensity="6.5">
+              <Color r="1" g="1" b="1" a="1" />
+            </Light>
+          </Components>
+        </Entity>
+
+        <Entity name="Menu Light 5">
+          <Transform>
+            <Position x="0" y="0" z="131.535"/>
+          </Transform>
+          <Components>
+            <Light Type="Point" Range="38" Intensity="6.5">
+              <Color r="1" g="1" b="1" a="1" />
+            </Light>
+          </Components>
+        </Entity>
+
+        <Entity name="Menu Light 6">
+          <Transform>
+            <Position x="0" y="0" z="246.61"/>
+          </Transform>
+          <Components>
+            <Light Type="Point" Range="36" Intensity="6.5">
+              <Color r="1" g="1" b="1" a="1" />
+            </Light>
+          </Components>
+        </Entity>
+
+        <Entity name="Menu Light 7">
+          <Transform>
+            <Position x="0" y="0" z="361.686"/>
+          </Transform>
+          <Components>
+            <Light Type="Point" Range="40" Intensity="6.5">
+              <Color r="1" g="1" b="1" a="1" />
+            </Light>
+          </Components>
+        </Entity>        
+      </Children>
+    </Entity>  
+  <Entity name="Menu Camera" tag="Camera">
+    <Transform>
+      <Position x="50" y="50" z="-42.508"/>
+      <Rotation pitch="0" yaw="-1.5707963" roll="0"/>
+    </Transform>
+    <Components>
+      <Camera fov="75" nearZ="0.1" farZ="1000" main="true"/>
+    </Components>
+  </Entity>
+  
+  <Entity name="Game Camera" tag="Camera">
+    <Transform>
+      <Rotation pitch="0" yaw="0" roll="0"/>
+    </Transform>
+    <Components>
+      <Camera fov="75" nearZ="0.1" farZ="1000"/>
+      <ThirdPersonCameraComponent x="0" y="9" z="-7" speed="2"/>
+    </Components>
+  </Entity>
+    
+  <Entity name="Free Camera" tag="Camera">
+    <Components>
+      <Camera fov="75" nearZ="0.1" farZ="10000"/>
+      <MovementController/>
+    </Components>
+  </Entity>
+
+  </Entities>
+
+</Level>

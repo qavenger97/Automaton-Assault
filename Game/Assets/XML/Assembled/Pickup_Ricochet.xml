@@ -1,0 +1,12 @@
+<Assembled name="Pickup_Ricochet" tag="Pickup">
+  <Components>
+    <Light Type="Point" Range="3" Intensity="1">
+      <Color r="0.2" g="0.5" b="0.5" a="1.0" />
+    </Light>
+    <Pickup type ="Ricochet" value="30"/>
+    <MeshRenderer>
+      <Mesh file="Assets/Mesh/Pickup_Ricochet.hmdl" />
+      <Material file="Assets/Material/Bullet_Material.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

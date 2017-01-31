@@ -1,0 +1,45 @@
+<Assembled name="BouncingBullet" tag="Projectile">
+  <Components>
+    <Projectile speed="30" life="2" bounce="true"/>
+    <Light Type="Point" Range="1.3" Intensity=".2">
+      <Color r="0.9" g="0.4" b="0.05" a="1" />
+    </Light>
+    <GPUParticleEmitter
+      EmitterSpawnType ="Burst"
+      EmitterParticleType="BillBoard"
+      EmitterParticleShape="Quad"
+      duration ="0.5"
+      maxParticle = "1500"
+      spawnRate="60"
+      gravityScale="0"
+      >
+      <ParticleFlags loop="false" playOnStart="true" keepAlive="true"/>
+      <Extent x="0.05" y="0.05" z="0.05"/>
+      <LifeTime min ="0.4" max = "0.8"/>
+
+      <RandomStartSizeMin x="0.006" y="0.006" z="0.006"/>
+      <RandomStartSizeMax x="0.012" y="0.012" z="0.012"/>
+
+      <StartSize x="1" y="1" z="1" />
+      <EndSize   x="5" y="5" z="5" />
+
+      <Speed start ="1.5" end="0.5"/>
+      <RandomStartSpeed min ="1" max="3"/>
+
+      <StartColor r=".6" g=".6" b=".6" a="0.6"/>
+      <EndColor r="0.1" g="0.1" b="0.1" a="0.1"/>
+      <RandomStartColor r="0.8" g="0.8" b="0.8" a="1"/>
+      <RandomEndColor r="0.8" g="0.8" b="0.8" a="1"/>
+
+      <MinInitalVelocity x="-0.1" y="0.1" z="-0.1"/>
+      <MaxInitalVelocity x="0.3" y="0.6" z="0.3"/>
+      <Mass min="1" max="20"/>
+
+      <Material file="Assets/Material/Vanguard_Charger_Material.xml"/>
+    </GPUParticleEmitter>
+    <MeshRenderer>
+      <Mesh file="Assets/Mesh/Bullet.hmdl" />
+      <Material file="Assets/Material/Bullet_Material.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

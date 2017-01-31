@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Texture slot="0" file="Assets/Texture/Environment/Wall Addon/Wall_light_Base_Color.dds"/>
+  <Texture slot="1" file="Assets/Texture/Environment/Wall Addon/Wall_light_Normal_OpenGL.dds"/>
+  <Texture slot="2" file="Assets/Texture/Environment/Wall Addon/Wall_light_Metallic.dds"/>
+  <Texture slot="3" file="Assets/Texture/Environment/Wall Addon/Wall_light_Roughness.dds"/>
+  <Texture slot="4" file="Assets/Texture/Environment/Wall Addon/Wall_light_Emissive.dds"/>
+</Material>

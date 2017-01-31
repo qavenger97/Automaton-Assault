@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material blend="AlphaBlend">
+  <UniformColor r="1" g="1" b="1" a="10"/>
+  <Texture slot="0" file="Assets/Texture/Environment/Railing/EnergyShield_ColorAlpha.dds"/>
+  <Texture slot="1" file="Assets/Texture/Environment/Railing/EnergyShield_Normal.dds"/>
+</Material>

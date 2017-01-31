@@ -1,0 +1,17 @@
+<BehaviorTree name="ChargerBotRocketSpawnAI">
+  <Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP></AI_HasHP>
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Sequence>
+          <AI_ChargerRocketSpawn />
+          <Chase target_tag="Player" stop_dist="2.5" speed="20.0" run_anim="run"/>
+          <BhvAIAttack target_tag="Player" attack_interval="2.0" attack_dist="2.5" atk_anim_0="thrust" atk_anim_0_speed="2.0" atk_anim_1="kick" atk_anim_1_speed="2.0" atk_anim_2="backhand" atk_anim_2_speed="2.0"/>
+        </Sequence>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_Die death_anim="death" pause_time="1.4" end_time="6.0" explode="true"/>
+  </Sequence>
+</BehaviorTree>

@@ -1,0 +1,10 @@
+<Assembled name="GrapplerClaw" tag="Enemy">
+  <Transform>
+    <Scale x="1" y="1" z="1"/>
+  </Transform>
+  <Components>
+    <MeshRenderer>
+      <Mesh file="Assets/Mesh/Grapple.hmdl" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

@@ -1,0 +1,8 @@
+<BehaviorTree name="TestBot">
+  <RepeatUntilFail>
+    <Sequence>
+      <ImplodeExplode speed="10.0" test ="1" />
+      <ImplodeExplode speed="20.0" test ="0" />
+    </Sequence>
+  </RepeatUntilFail>
+</BehaviorTree>

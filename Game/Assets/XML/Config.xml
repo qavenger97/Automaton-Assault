@@ -1,0 +1,8 @@
+<Config>
+  <Level>MainMenu.xml</Level>
+  <Level>Room.xml</Level>
+  <Level>Room_Player.xml</Level>
+  <Level>GameHUD.xml</Level>
+  <Level>BossLevel.xml</Level>
+  <!--<Level>NewAssetLevel.xml</Level>-->
+</Config>

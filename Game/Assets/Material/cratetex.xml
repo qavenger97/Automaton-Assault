@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Texture slot="0" file="Assets/Texture/cratetex.dds"/>
+</Material>

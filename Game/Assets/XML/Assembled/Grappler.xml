@@ -1,0 +1,25 @@
+<Assembled name="Grappler" tag="Enemy">
+  <Transform>
+    <Scale x="1.0" y="1.0" z="1.0"/>
+  </Transform>
+  <Components>
+    <IKComponent Count="0" Length="0.3" drag_speed="1" instance_name="IKGrapple" rotation="0.0" frozen="true" Iteration="0"/>
+    <GrapplerComp/>
+    <MeshRenderer>
+      <!--<Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />-->
+      <Mesh file="Assets/Mesh/GrappleBot_Spawn.hmdl" />
+    </MeshRenderer>
+    <Motor max_speed="7.0" turn_speed="0.4"/>
+    <Light Type="Point" Range="3" Intensity="1">
+      <Color r="1" g="0.2" b="0" a="1" />
+    </Light>
+    <DynamicCollider coll_group="1">
+      <Cylinder Radius="0.5" Height="2">
+        <Center x="0" y="0" z="0"/>
+      </Cylinder>
+    </DynamicCollider>
+    <UnitShield/>
+    <Health Value="20" />
+    <BehaviorTree type="GrapplerAI"/>
+  </Components>
+</Assembled>

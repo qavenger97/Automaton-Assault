@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7AA1FE6-D7DD-487D-B2F7-C16756413AB2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Svochak\Perforce\BSvochak_P4_Workspace\Studios\1611 - Urnverse\Project Isolation\AutomatonAssault\Dependencies\Gateware\Include\Interface;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Svochak\Perforce\BSvochak_P4_Workspace\Studios\1611 - Urnverse\Project Isolation\AutomatonAssault\Dependencies\Gateware\Lib\Win32\amd64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;..\Dependencies\Wwise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;..\Dependencies\Wwise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;..\Dependencies\Wwise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;..\Dependencies\Wwise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib />
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation\AnimationManager.h" />
+    <ClInclude Include="Animation\Channel.h" />
+    <ClInclude Include="Animation\Clip.h" />
+    <ClInclude Include="Behavior\Decorator.h" />
+    <ClInclude Include="Behavior\IAction.h" />
+    <ClInclude Include="Behavior\IBehavior.h" />
+    <ClInclude Include="Behavior\ICondition.h" />
+    <ClInclude Include="Behavior\Inverter.h" />
+    <ClInclude Include="Behavior\Parallel.h" />
+    <ClInclude Include="Behavior\Primitive.h" />
+    <ClInclude Include="Behavior\RepeatUntilFail.h" />
+    <ClInclude Include="Behavior\Selector.h" />
+    <ClInclude Include="Behavior\Sequence.h" />
+    <ClInclude Include="Collision\Collision.h" />
+    <ClInclude Include="Collision\Cylinder.h" />
+    <ClInclude Include="Component\Animation.h" />
+    <ClInclude Include="Component\AudioSource.h" />
+    <ClInclude Include="Component\BaseEventGroup.h" />
+    <ClInclude Include="Component\BehaviorTree.h" />
+    <ClInclude Include="Component\Camera.h" />
+    <ClInclude Include="Component\Collider.h" />
+    <ClInclude Include="Component\DynamicCollider.h" />
+    <ClInclude Include="Component\GPUParticleEmitter.h" />
+    <ClInclude Include="Component\IComponent.h" />
+    <ClInclude Include="Component\Motor.h" />
+    <ClInclude Include="Component\MovementController.h" />
+    <ClInclude Include="Component\ParticleEmitter.h" />
+    <ClInclude Include="Component\Separation.h" />
+    <ClInclude Include="Component\StaticCollider.h" />
+    <ClInclude Include="Component\TimeTrigger.h" />
+    <ClInclude Include="Component\Transform.h" />
+    <ClInclude Include="Component\TriggerEventGroup.h" />
+    <ClInclude Include="Component\UIComponent.h" />
+    <ClInclude Include="Component\WaypointAgent.h" />
+    <ClInclude Include="Core\AssembledBehaviorReg.h" />
+    <ClInclude Include="Core\AssembledEntityReg.h" />
+    <ClInclude Include="Core\BehaviorFactory.h" />
+    <ClInclude Include="Core\BehaviorPool.h" />
+    <ClInclude Include="Core\BehaviorRegister.h" />
+    <ClInclude Include="Core\ComponentFactory.h" />
+    <ClInclude Include="Core\ComponentRegister.h" />
+    <ClInclude Include="Core\DDSTextureLoader.h" />
+    <ClInclude Include="Core\DevMenu.h" />
+    <ClInclude Include="Core\Engine.h" />
+    <ClInclude Include="Core\Entity.h" />
+    <ClInclude Include="Core\ComponentPool.h" />
+    <ClInclude Include="Core\EntityAssembler.h" />
+    <ClInclude Include="Core\FileArchive.h" />
+    <ClInclude Include="Core\FileUtils.h" />
+    <ClInclude Include="Core\InputManager.h" />
+    <ClInclude Include="Core\ISpatial.h" />
+    <ClInclude Include="Core\LevelLoader.h" />
+    <ClInclude Include="Core\Math.h" />
+    <ClInclude Include="Core\Message.h" />
+    <ClInclude Include="Core\EngineMessage.h" />
+    <ClInclude Include="Core\ParticleDefine.h" />
+    <ClInclude Include="Core\Profiler.h" />
+    <ClInclude Include="Core\Quadtree.h" />
+    <ClInclude Include="Core\SceneGraph.h" />
+    <ClInclude Include="Core\StrID.h" />
+    <ClInclude Include="Core\TimeManager.h" />
+    <ClInclude Include="Core\WaypointGraph.h" />
+    <ClInclude Include="Core\WaypointSearch.h" />
+    <ClInclude Include="DebugConst.h" />
+    <ClInclude Include="GPUSort.h" />
+    <ClInclude Include="Math\Aabb.h" />
+    <ClInclude Include="Math\Ray.h" />
+    <ClInclude Include="Math\SimpleMath.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Renderer\CommonDef.h" />
+    <ClInclude Include="Renderer\D3DUtil.h" />
+    <ClInclude Include="Renderer\DebugRenderer.h" />
+    <ClInclude Include="Renderer\DevTextRenderer.h" />
+    <ClInclude Include="Renderer\Light.h" />
+    <ClInclude Include="Renderer\Material.h" />
+    <ClInclude Include="Renderer\Mesh.h" />
+    <ClInclude Include="Renderer\RenderBuffer.h" />
+    <ClInclude Include="Renderer\RenderComponent.h" />
+    <ClInclude Include="Renderer\RenderDevice.h" />
+    <ClInclude Include="Renderer\RenderPass.h" />
+    <ClInclude Include="Renderer\RenderQueue.h" />
+    <ClInclude Include="Renderer\RenderSystem.h" />
+    <ClInclude Include="Renderer\Texture.h" />
+    <ClInclude Include="Renderer\VertexDeclaration.h" />
+    <ClInclude Include="Core\Shader.h" />
+    <ClInclude Include="Core\RenderWindow.h" />
+    <ClInclude Include="System\AISystem.h" />
+    <ClInclude Include="System\AnimationSystem.h" />
+    <ClInclude Include="System\AudioSystemWwise.h" />
+    <ClInclude Include="System\CameraSystem.h" />
+    <ClInclude Include="System\EntityManager.h" />
+    <ClInclude Include="System\EventSystem.h" />
+    <ClInclude Include="System\GameLogicSystem.h" />
+    <ClInclude Include="System\GPUParticleSystem.h" />
+    <ClInclude Include="System\ISystem.h" />
+    <ClInclude Include="System\MovementControllerSystem.h" />
+    <ClInclude Include="System\ParticleSystem.h" />
+    <ClInclude Include="System\PhysicsSystem.h" />
+    <ClInclude Include="System\UISystem.h" />
+    <ClInclude Include="TinyXML\tinyxml2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation\AnimationManager.cpp" />
+    <ClCompile Include="Animation\Channel.cpp" />
+    <ClCompile Include="Animation\Clip.cpp" />
+    <ClCompile Include="Behavior\IAction.cpp" />
+    <ClCompile Include="Behavior\IBehavior.cpp" />
+    <ClCompile Include="Behavior\ICondition.cpp" />
+    <ClCompile Include="Behavior\Inverter.cpp" />
+    <ClCompile Include="Behavior\Parallel.cpp" />
+    <ClCompile Include="Behavior\RepeatUntilFail.cpp" />
+    <ClCompile Include="Behavior\Selector.cpp" />
+    <ClCompile Include="Behavior\Sequence.cpp" />
+    <ClCompile Include="Collision\Collision.cpp" />
+    <ClCompile Include="Collision\Cylinder.cpp" />
+    <ClCompile Include="Component\Animation.cpp" />
+    <ClCompile Include="Component\AudioSource.cpp" />
+    <ClCompile Include="Component\BaseEventGroup.cpp" />
+    <ClCompile Include="Component\BehaviorTree.cpp" />
+    <ClCompile Include="Component\Camera.cpp" />
+    <ClCompile Include="Component\Collider.cpp" />
+    <ClCompile Include="Component\DynamicCollider.cpp" />
+    <ClCompile Include="Component\GPUParticleEmitter.cpp" />
+    <ClCompile Include="Component\IComponent.cpp" />
+    <ClCompile Include="Component\Motor.cpp" />
+    <ClCompile Include="Component\MovementController.cpp" />
+    <ClCompile Include="Component\ParticleEmitter.cpp" />
+    <ClCompile Include="Component\Separation.cpp" />
+    <ClCompile Include="Component\StaticCollider.cpp" />
+    <ClCompile Include="Component\TimeTrigger.cpp" />
+    <ClCompile Include="Component\Transform.cpp" />
+    <ClCompile Include="Component\TriggerEventGroup.cpp" />
+    <ClCompile Include="Component\UIComponent.cpp" />
+    <ClCompile Include="Component\WaypointAgent.cpp" />
+    <ClCompile Include="Core\DDSTextureLoader.cpp" />
+    <ClCompile Include="Core\DevMenu.cpp" />
+    <ClCompile Include="Core\FileUtils.cpp" />
+    <ClCompile Include="Core\EngineMessage.cpp" />
+    <ClCompile Include="Core\Profiler.cpp" />
+    <ClCompile Include="Core\WaypointGraph.cpp" />
+    <ClCompile Include="Core\Math.cpp" />
+    <ClCompile Include="Core\WaypointSearch.cpp" />
+    <ClCompile Include="Core\BehaviorFactory.cpp" />
+    <ClCompile Include="Core\ComponentFactory.cpp" />
+    <ClCompile Include="Core\Engine.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Core\Entity.cpp" />
+    <ClCompile Include="Core\EntityAssembler.cpp" />
+    <ClCompile Include="Core\FileArchive.cpp" />
+    <ClCompile Include="Core\InputManager.cpp" />
+    <ClCompile Include="Core\LevelLoader.cpp" />
+    <ClCompile Include="Core\SceneGraph.cpp" />
+    <ClCompile Include="Core\StrID.cpp" />
+    <ClCompile Include="Core\TimeManager.cpp" />
+    <ClCompile Include="GPUSort.cpp" />
+    <ClCompile Include="Math\Aabb.cpp" />
+    <ClCompile Include="Math\Ray.cpp" />
+    <ClCompile Include="Math\SimpleMath.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Renderer\DebugRenderer.cpp" />
+    <ClCompile Include="Renderer\DevTextRenderer.cpp" />
+    <ClCompile Include="Renderer\Light.cpp" />
+    <ClCompile Include="Renderer\Material.cpp" />
+    <ClCompile Include="Renderer\Mesh.cpp" />
+    <ClCompile Include="Renderer\RenderBuffer.cpp" />
+    <ClCompile Include="Renderer\RenderComponent.cpp" />
+    <ClCompile Include="Renderer\RenderDevice.cpp" />
+    <ClCompile Include="Renderer\RenderQueue.cpp" />
+    <ClCompile Include="Renderer\RenderSystem.cpp" />
+    <ClCompile Include="Renderer\Texture.cpp" />
+    <ClCompile Include="Core\Shader.cpp" />
+    <ClCompile Include="Core\RenderWindow.cpp" />
+    <ClCompile Include="System\AISystem.cpp" />
+    <ClCompile Include="System\AnimationSystem.cpp" />
+    <ClCompile Include="System\AudioSystemWwise.cpp" />
+    <ClCompile Include="System\CameraSystem.cpp" />
+    <ClCompile Include="System\EntityManager.cpp" />
+    <ClCompile Include="System\EventSystem.cpp" />
+    <ClCompile Include="System\GameLogicSystem.cpp" />
+    <ClCompile Include="System\GPUParticleSystem.cpp" />
+    <ClCompile Include="System\MovementControllerSystem.cpp" />
+    <ClCompile Include="System\ParticleSystem.cpp" />
+    <ClCompile Include="System\PhysicsSystem.cpp" />
+    <ClCompile Include="System\UISystem.cpp" />
+    <ClCompile Include="TinyXML\tinyxml2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Renderer\VertexSignature\ColorVertexSignature.hlsl">
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\FontVertexSignature.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\MeshVertexSignature.hlsl">
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)</VariableName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename)</VariableName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\SkinnedMeshVertexSignature.hlsl">
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RelativeDir)%(Filename).csh</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Math\SimpleMath.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Component\ReadMe.txt.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

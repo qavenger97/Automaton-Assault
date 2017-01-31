@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <UniformColor r="0.2" g="0.2" b="0.2" a="1.0"/>
+  <Texture slot="0" file="Assets/Texture/Black2x2.dds"/>
+  <Texture slot="3" file="Assets/Texture/Orange2x2.dds"/>
+</Material>

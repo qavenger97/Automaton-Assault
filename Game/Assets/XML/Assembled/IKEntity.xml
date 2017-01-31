@@ -1,0 +1,17 @@
+<Assembled name="IKEntity" tag="IK">
+  <Transform>
+    <Scale x="1" y="1" z="1"/>
+  </Transform>
+  <Components>
+    <IKObject/>
+    <Health Value="5"/>
+    <MeshRenderer>
+      <Mesh file="Assets/Mesh/Grapple.hmdl" />
+    </MeshRenderer>
+    <DynamicCollider coll_group="3">
+      <Cylinder Radius="0.14" Height="2">
+        <Center x="0" y="0" z="0"/>
+      </Cylinder>
+    </DynamicCollider>
+  </Components>
+</Assembled>

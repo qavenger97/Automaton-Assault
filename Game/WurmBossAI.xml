@@ -1,0 +1,16 @@
+<BehaviorTree name="WurmBossAI">
+  <Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP/>
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Sequence>
+          <AI_KeypressToContinue/>          
+        </Sequence>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_EnemyGrouping target_tag="Player" policy="remove"/>
+    <AI_Die death_anim="death" pause_time="1.4" end_time="6.0"/>
+  </Sequence>
+</BehaviorTree>

@@ -1,0 +1,16 @@
+<BehaviorTree name="SpiderBotAI">
+  <Sequence>
+    <Parallel policy="success">
+      <RepeatUntilFail>
+        <AI_HasHP />
+      </RepeatUntilFail>
+      <RepeatUntilFail>
+        <Sequence>
+          <Chase target_tag="Player" stop_dist="9" speed="20.0" run_anim="walk" anim_speed="2.0"/>
+          <AI_SpiderBotBehavior />
+        </Sequence>
+      </RepeatUntilFail>
+    </Parallel>
+    <AI_Die death_anim="death" pause_time="0" end_time="0" explode="true"/>
+  </Sequence>
+</BehaviorTree>

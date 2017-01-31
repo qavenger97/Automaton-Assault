@@ -1,0 +1,13 @@
+<Assembled name="WurmCarrier" tag="IK">
+  <Transform>
+    <Scale x="1" y="1" z="1"/>
+  </Transform>
+  <Components>
+    <IKObject/>
+    <Health Value="5"/>
+    <MeshRenderer RenderType ="PBR">
+      <Mesh file="Assets/Mesh/Boss_Carrier_000.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_Boss_Carrier.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

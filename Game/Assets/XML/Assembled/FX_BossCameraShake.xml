@@ -1,0 +1,5 @@
+<Assembled name="FX_BossCameraShake">
+  <Components>
+    <CameraShakeEffect Duration="2.0" Fade="1.0" Amplitude="2.0" Roll="1.0"/>
+  </Components>
+</Assembled>

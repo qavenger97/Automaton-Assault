@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Texture slot="0" file="Assets/Texture/Blue2x2.dds"/>
+  <Texture slot="1" file="Assets/Texture/Default_n.dds"/>
+  <Texture slot="2" file="Assets/Texture/DefaultPBR.dds"/>
+  <Texture slot="3" file="Assets/Texture/DefaultPBR_White.dds"/>
+  <Texture slot="4" file="Assets/Texture/Blue2x2.dds"/>
+</Material>

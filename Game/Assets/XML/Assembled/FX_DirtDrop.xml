@@ -1,0 +1,41 @@
+<Assembled name="FX_DirtDrop" tag="Particle">
+  <Components>
+    <GPUParticleEmitter
+      EmitterSpawnType ="Normal"
+      EmitterParticleType="Default"
+      EmitterParticleShape="Cube"
+      duration ="5"
+      spawnRate = "2000"
+      gravityScale="1"
+      >
+      <!--EmitterSpawnType ="Normal"
+      EmitterParticleType="BillBoardVelocity"
+      EmitterParticleShape="Cube"
+      duration ="3"
+      spawnRate = "70"
+      gravityScale="0"
+      >-->
+      <ParticleFlags loop="false" playOnStart="true"/>
+      <Extent x="2" y="0.0" z="2"/>
+      <LifeTime min ="0.3" max = "0.65"/>
+
+      <RandomStartSizeMin x="0.07" y="0.07" z="0.07"/>
+      <RandomStartSizeMax x="0.1" y="0.1" z="0.1"/>
+
+      <StartSize x="0.4" y="0.4" z="0.4" />
+      <EndSize   x="1" y="1" z="1" />
+
+      <Speed start ="1" end="1"/>
+      <RandomStartSpeed min = "-3" max="-1"/>
+
+      <StartColor r="0.6" g="0.6" b="0.6" a="1"/>
+      <EndColor r="0.2" g="0.2" b="0.2" a="0.5"/>
+      <RandomStartColor r="0.37" g="0.23" b="0.12" a="1"/>
+      <RandomEndColor r="0.41" g="0.29" b="0.2" a="1"/>
+
+      <MinInitalVelocity x="-0.1" y="0.0" z="-0.1"/>
+      <MaxInitalVelocity x="0.1" y="0.0" z="0.1"/>
+      <Mass min="1" max="1"/>
+    </GPUParticleEmitter>
+  </Components>
+</Assembled>

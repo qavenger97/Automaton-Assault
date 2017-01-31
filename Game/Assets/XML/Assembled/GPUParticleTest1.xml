@@ -1,0 +1,33 @@
+<Assembled name="GPUParticle_Test1" tag="Particle">
+  <Components>
+    <GPUParticleEmitter
+      EmitterSpawnType ="Burst" 
+      EmitterParticleType="BillBoard"
+      EmitterParticleShape="Triangle" 
+      duration ="0.1" 
+      maxParticle = "60"
+      gravityScale="1"
+      >
+      <ParticleFlags loop="false" playOnStart="true"/>
+      <Extent x="0.01" y="0.01" z="0.01"/>
+      <LifeTime min ="0.2" max = "0.6"/>
+      <RandomStartSizeMin x="0.01" y="0.01" z="0.01"/>
+      <RandomStartSizeMax x="0.08" y="0.08" z="0.08"/>
+
+      <StartSize x="1" y="1" z="1" />
+      <EndSize   x="0.1" y="0.1" z="0.1" />
+
+      <Speed start ="1" end="0.1"/>
+      <RandomStartSpeed min ="-4" max="-3"/>
+
+      <StartColor r="1" g="1" b="1" a="1"/>
+      <EndColor r="1" g="0.5" b="0.2" a="1"/>
+      <RandomStartColor r="1" g="0.5" b="0" a="1"/>
+      <RandomEndColor r="1" g="0.5" b="0" a="1"/>
+
+      <MinInitalVelocity x="-1.5" y="-1.5" z="-1.5"/>
+      <MaxInitalVelocity x="1.5" y="2.5" z="1.5"/>
+      <Mass min="1" max="20"/>
+    </GPUParticleEmitter>
+  </Components>
+</Assembled>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Texture slot="0" file="Assets/Texture/metal_bolted_square_plate_basecolor.dds"/>
+  <Texture slot="1" file="Assets/Texture/metal_bolted_square_plate_normal.dds"/>
+</Material>

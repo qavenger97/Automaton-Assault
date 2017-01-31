@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Core\Engine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderSystem.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\D3DUtil.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ComponentFactory.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ComponentRegister.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Entity.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Message.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\AnimationSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\GameLogicSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ParticleSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\PhysicsSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\UISystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderPass.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderBuffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DebugRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\VertexDeclaration.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Aabb.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Math.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Decorator.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\IAction.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\IBehavior.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\ICondition.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Inverter.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Primitive.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\RepeatUntilFail.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Selector.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Sequence.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderComponent.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderQueue.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SceneGraph.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RenderDevice.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ComponentPool.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\AISystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BehaviorFactory.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BehaviorRegister.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior\Parallel.h">
+      <Filter>Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TimeManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BehaviorPool.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ISystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Ray.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\InputManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\StrID.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\EntityManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Ray.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\MovementController.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\AssembledBehaviorReg.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EntityAssembler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\AssembledEntityReg.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\MovementControllerSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\CameraSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyXML\tinyxml2.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Mesh.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FileArchive.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\LevelLoader.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\SimpleMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WaypointGraph.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WaypointSearch.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DDSTextureLoader.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision\Cylinder.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision\Collision.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="System\AudioSystemWwise.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FileUtils.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EngineMessage.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Texture.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\CommonDef.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Material.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\AnimationManager.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\Channel.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\Clip.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Light.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DevTextRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DevMenu.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Profiler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\EventSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ISpatial.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Quadtree.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Shader.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Animation.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\BehaviorTree.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Camera.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Collider.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\DynamicCollider.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\IComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Motor.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\MovementController.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\ParticleEmitter.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Separation.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\StaticCollider.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Transform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\TriggerEventGroup.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\UIComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\WaypointAgent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RenderWindow.h" />
+    <ClInclude Include="System\GPUParticleSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\GPUParticleEmitter.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ParticleDefine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\AudioSource.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUSort.h" />
+    <ClInclude Include="DebugConst.h" />
+    <ClInclude Include="Component\BaseEventGroup.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\TimeTrigger.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Core\Engine.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderSystem.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ComponentFactory.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Entity.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="System\AnimationSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\GameLogicSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ParticleSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\PhysicsSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\UISystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderBuffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DebugRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Aabb.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\IAction.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\ICondition.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\Inverter.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\RepeatUntilFail.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\Sequence.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderComponent.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderQueue.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SceneGraph.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RenderDevice.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="System\AISystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\BehaviorFactory.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\IBehavior.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\Parallel.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TimeManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Ray.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\InputManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\StrID.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="System\EntityManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Ray.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\MovementController.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior\Selector.cpp">
+      <Filter>Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EntityAssembler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="System\MovementControllerSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\CameraSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxml2.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Mesh.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FileArchive.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\LevelLoader.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WaypointSearch.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WaypointGraph.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DDSTextureLoader.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision\Cylinder.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision\Collision.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\SimpleMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="System\AudioSystemWwise.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FileUtils.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Texture.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Material.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\AnimationManager.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\Channel.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\Clip.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Light.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Math.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DevTextRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DevMenu.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Profiler.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="System\EventSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EngineMessage.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Shader.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Animation.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\BehaviorTree.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Camera.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Collider.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\DynamicCollider.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\IComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Motor.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\MovementController.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\ParticleEmitter.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Separation.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\StaticCollider.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Transform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\TriggerEventGroup.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\UIComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\WaypointAgent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RenderWindow.cpp" />
+    <ClCompile Include="System\GPUParticleSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\GPUParticleEmitter.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\AudioSource.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUSort.cpp" />
+    <ClCompile Include="Component\BaseEventGroup.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\TimeTrigger.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{f3eb09b5-03f2-4e4c-bd1e-8f143b8d6ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{9007c0be-b20d-4b48-85da-b009ce76b354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{40c73939-2da8-4b11-867e-e45069afe1c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\VertexSignature">
+      <UniqueIdentifier>{bdd732e6-e5b4-4f87-9610-fc481e68840e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{b7df49c6-414c-4dcb-93bc-8d98c6d3e99f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavior">
+      <UniqueIdentifier>{b786a3ff-61e4-4594-b04f-21d189cce4c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{3aca8216-eada-47ef-a108-cc933af0da42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{b76c6c26-e0bb-4546-8c78-e75ddbdfdc61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{4b4b9f41-387f-4dda-b488-665889ff1581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{feec0894-d86a-46e7-b1c5-90b8ffdc2945}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Renderer\VertexSignature\ColorVertexSignature.hlsl">
+      <Filter>Renderer\VertexSignature</Filter>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\MeshVertexSignature.hlsl">
+      <Filter>Renderer\VertexSignature</Filter>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\SkinnedMeshVertexSignature.hlsl">
+      <Filter>Renderer\VertexSignature</Filter>
+    </FxCompile>
+    <FxCompile Include="Renderer\VertexSignature\FontVertexSignature.hlsl">
+      <Filter>Renderer\VertexSignature</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Math\SimpleMath.inl">
+      <Filter>Math</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Component\ReadMe.txt.txt">
+      <Filter>Component</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,40 @@
+<Assembled name="ChargerBot" tag="Enemy">
+  <Transform>
+  </Transform>
+  <Components>
+    <ChargerComp/>
+    <!--<IKComponent Count="10" Length="0.3"/>-->
+    <UnitShield enabled="false" r="0.0" g="0.8" b="0.8" offset_y="1.0"/>
+    <SkinnedMeshRenderer isLightWeight="true">
+      <Mesh file="Assets/Mesh/ChargerBot_Run.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_Vanguard_Charger_Material.xml"/>
+    </SkinnedMeshRenderer>
+    <Motor max_speed="7.0" turn_speed="0.4"/>
+    <Separation mode="agent" separation_strength="1.0" safe_radius="2.0"/>
+    <Animation>
+      <Clips>
+        <Clip name="default" file="Assets/Animation/ChargerBot_Idle.hani" setAsStart="true" looping="true"/>
+        <Clip name="run" file="Assets/Animation/ChargerBot_Run.hani" looping="true"/>
+        <Clip name="kick" file="Assets/Animation/ChargerBot_Attack_Left.hani" looping="false"/>
+        <Clip name="thrust" file="Assets/Animation/ChargerBot_Attack_Right.hani" looping="false"/>
+        <Clip name="backhand" file="Assets/Animation/ChargerBot_Attack_Both.hani" looping="false"/>
+        <Clip name="death" file="Assets/Animation/ChargerBot_Death.hani" looping="false"/>
+        <Clip name="charge" file="Assets/Animation/ChargerBot_Charge_Up.hani" looping="false"/>
+        <Clip name="lunge" file="Assets/Animation/ChargerBot_Lunge.hani" looping="false"/>
+        <Clip name="idle" file="Assets/Animation/ChargerBot_Idle.hani" looping="false"/>
+		    <Clip name="charger_rocket_spawn" file="Assets/Animation/ChargerBot_Flight_Land.hani" looping="false"/>
+      </Clips>
+    </Animation>
+    <Light Type="Point" Range="3" Intensity="1">
+      <Color r="1" g="0.2" b="0" a="1" />
+    </Light>
+    <DynamicCollider coll_group="1">
+      <Cylinder Radius="0.5" Height="2">
+        <Center x="0" y="1" z="0"/>
+      </Cylinder>
+    </DynamicCollider>
+    <Health Value="5" />
+    <BehaviorTree type="ChargerBotAI"/>
+    <WaypointAgent/>
+  </Components>
+</Assembled>

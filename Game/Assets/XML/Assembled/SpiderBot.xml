@@ -1,0 +1,31 @@
+<Assembled name="SpiderBot" tag="Enemy">
+  <Transform>
+    <Scale x="0.01" y="0.01" z="0.01"/>
+  </Transform>
+  <Components>
+    <Motor max_speed="4.0" turn_speed="0.1"/>
+    <SkinnedMeshRenderer>
+      <Mesh file="Assets/Mesh/SpiderBot.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_Spider_Bot.xml" />
+    </SkinnedMeshRenderer>
+    <Light Type="Point" Range="3" Intensity="1">
+      <Color r="1" g="0.2" b="0" a="1" />
+    </Light>
+    <Animation>
+      <Clips>
+        <Clip name="idle" file="Assets/Animation/SPIDER_BOT_idle.hani" setAsStart="true" looping="true"/>
+        <Clip name="walk" file="Assets/Animation/SPIDER_BOT_walk.hani" looping="true"/>
+        <Clip name="jump" file="Assets/Animation/SPIDER_BOT_small_jump.hani" looping="false"/>
+      </Clips>
+    </Animation>
+    <DynamicCollider coll_group="1">
+      <Cylinder Radius="0.5" Height="2">
+        <Center x="0" y="1.0" z="0"/>
+      </Cylinder>
+    </DynamicCollider>
+    <WaypointAgent />
+    <Health Value="50" />
+    <BehaviorTree type="SpiderBotAI"/>
+    <AudioSource />
+  </Components>
+</Assembled>

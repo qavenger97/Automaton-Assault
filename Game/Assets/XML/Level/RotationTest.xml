@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Level>
+  <Entities>
+    <Entity name="Player" tag="Player">
+      <Transform>
+        <Position x="0.0" y="3.0" z="12.0"/>
+        <!-- Just using default rotation, otherwise it would be <Rotation pitch="5" yaw="5" roll="5"/> -->
+      </Transform>
+      <Components>
+        <PlayerComp speed="5.0"/>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Props/forklift.hmdl" />
+        </MeshRenderer>
+        <DynamicCollider>
+          <AABB>
+            <Min x="-1" y="-1" z="-1"/>
+            <Max x="1" y="1" z="1"/>
+          </AABB>
+        </DynamicCollider>
+      </Components>
+    </Entity>
+    <Entity name="Cube">
+      <Transform>
+        <Position x="0" y="0" z="0" />
+        <Rotation pitch="0" yaw="0" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (1)">
+      <Transform>
+        <Position x="2" y="0" z="0" />
+        <Rotation pitch="0" yaw="0.2617989" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (2)">
+      <Transform>
+        <Position x="4" y="0" z="0" />
+        <Rotation pitch="0" yaw="0.5235978" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (3)">
+      <Transform>
+        <Position x="6" y="0" z="0" />
+        <Rotation pitch="0" yaw="0.7853967" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (4)">
+      <Transform>
+        <Position x="8" y="0" z="0" />
+        <Rotation pitch="0" yaw="1.047196" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (5)">
+      <Transform>
+        <Position x="10" y="0" z="0" />
+        <Rotation pitch="0" yaw="1.308994" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Cube (6)">
+      <Transform>
+        <Position x="12" y="0" z="0" />
+        <Rotation pitch="0" yaw="1.570793" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components>
+        <MeshRenderer>
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+        </MeshRenderer>
+      </Components>
+      <Children>
+        <Entity name="Cube (7)">
+          <Transform>
+            <Position x="0" y="2" z="0" />
+            <Rotation pitch="0.2526789" yaw="0.008797925" roll="0.06923912" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (8)">
+          <Transform>
+            <Position x="0" y="4" z="0" />
+            <Rotation pitch="0.5235979" yaw="2.720282E-08" roll="-4.212149E-09" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (9)">
+          <Transform>
+            <Position x="0" y="6" z="0" />
+            <Rotation pitch="0.7853977" yaw="-9.536741E-07" roll="4.019434E-14" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (10)">
+          <Transform>
+            <Position x="0" y="8" z="0" />
+            <Rotation pitch="1.047197" yaw="-1.966954E-06" roll="1.136866E-13" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (11)">
+          <Transform>
+            <Position x="0" y="10" z="0" />
+            <Rotation pitch="1.308995" yaw="-3.79985E-06" roll="-1.96694E-06" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+        <Entity name="Cube (12)">
+          <Transform>
+            <Position x="0" y="12" z="0" />
+            <Rotation pitch="1.570796" yaw="-2.686906E-06" roll="0" />
+            <Scale x="1" y="1" z="1" />
+          </Transform>
+          <Components>
+            <MeshRenderer>
+              <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+            </MeshRenderer>
+          </Components>
+        </Entity>
+      </Children>
+    </Entity>
+    <Entity name="Directional light">
+      <Transform>
+        <Position x="0" y="0" z="0" />
+        <Rotation pitch="0.8726646" yaw="5.759586" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components />
+    </Entity>
+    <Entity name="Main Camera">
+      <Transform>
+        <Position x="0" y="12" z="-6" />
+        <Rotation pitch="1.047152" yaw="0" roll="0" />
+        <Scale x="1" y="1" z="1" />
+      </Transform>
+      <Components />
+    </Entity>
+  </Entities>
+</Level>

@@ -1,0 +1,13 @@
+<Assembled name="WurmClaw" tag="IK">
+  <Transform>
+    <Scale x="5" y="5" z="5"/>
+  </Transform>
+  <Components>
+    <IKObject/>
+    <Health Value="5"/>
+    <MeshRenderer RenderType ="PBR">
+      <Mesh file="Assets/Mesh/Grapple1.hmdl" />
+      <Material file="Assets/Material/PBR/PBR_TempFloor.xml" />
+    </MeshRenderer>
+  </Components>
+</Assembled>

@@ -1,0 +1,11 @@
+<Assembled name="CoverBox">
+  <Transform>
+        <Scale x="111.2713" y="111.2714" z="111.2714" />
+      </Transform>
+      <Components>
+        <MeshRenderer RenderType="UNLIT">
+          <Mesh file="Assets/Mesh/Cube1x1x1.hmdl" />
+          <Material file="Assets/Material/UNLIT/UNLIT_Black.xml" />
+        </MeshRenderer>
+      </Components>
+</Assembled>

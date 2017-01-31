@@ -1,0 +1,35 @@
+<Assembled name="FxLaserBurn" tag="Particle">
+  <Components>
+    <GPUParticleEmitter
+      EmitterSpawnType ="Burst"
+      EmitterParticleType="BillBoardVelocity"
+      EmitterParticleShape="Cube"
+      duration =".1"
+      maxParticle = "0"
+      gravityScale="-1"
+      >
+      <ParticleFlags loop="true" playOnStart="true"/>
+      <Extent x="0.1" y="0.1" z="0.1"/>
+      <LifeTime min ="0.01" max = "0.7"/>
+
+      <RandomStartSizeMin x="0.03" y="0.03" z="0.03"/>
+      <RandomStartSizeMax x="0.05" y="0.05" z="0.05"/>
+
+      <StartSize x="3" y="3" z="3" />
+      <EndSize   x="1" y="1" z="1" />
+
+      <Speed start ="0.5" end="0.2"/>
+      <RandomStartSpeed min = "-.5" max=".5"/>
+
+      <StartColor r="5" g="4" b="0.5" a="1"/>
+      <EndColor r="1" g="0" b="0" a="0"/>
+      <RandomStartColor r="1" g="1" b="1" a="1"/>
+      <RandomEndColor r="1" g="1" b="1" a="1"/>
+
+      <MinInitalVelocity x="-5.0" y="-5.0" z="-5.0"/>
+      <MaxInitalVelocity x="5.0" y="5.0" z="5.0"/>
+      <Mass min="1" max="1"/>
+    </GPUParticleEmitter>
+    <EntitySpawner Assembled="FX_ExplosionSpark" SpawnOnStart="true" />
+  </Components>
+</Assembled>
